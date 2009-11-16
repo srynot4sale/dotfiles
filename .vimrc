@@ -29,9 +29,6 @@ set smarttab
 " Use indent from current line when starting a new one
 set autoindent
 
-" Use smart indenting when starting a new line
-set smartindent
-
 " Don't use c style indenting
 set nocindent
 
