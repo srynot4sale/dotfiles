@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export WINDOW_MANAGER=/usr/bin/dwm
+
+conky | while true; read line; do xsetroot -name "$line"; done &
