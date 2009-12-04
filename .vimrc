@@ -44,28 +44,33 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 
 """""" PHP stuff
-" highlights interpolated variables in sql strings and does sql-syntax highlighting
-autocmd FileType php let php_sql_query=1
-
 " highlights html inside of php strings
 autocmd FileType php let php_htmlInStrings=1
-
-" automagically folds functions & methods
-autocmd FileType php let php_folding=1
 
 " make: % to check php syntax
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
 
-"""""" Key bindings
-" Map upper-case W to lower-case W
-cmap W w
+"""""" Fix typos
+cabbrev Wq wq
+cabbrev WQ wq
+cabbrev Q q
+cabbrev W w
+cabbrev E e
 
 
-""""""""""""" GUI stuff
+"""""" GUI stuff
 colorscheme darkspectrum
-
 set guioptions-=T
-
 set gfn=DejaVu\ Sans\ Mono\ 8
+
+
+"""""" Scroll with context
+set scrolloff=3
+set sidescrolloff=3
+
+
+""""""""""""""""""""""""""""""""""
+" autoreloading of vim config when saving it
+autocmd! bufwritepost .vimrc source ~/.vimrc
