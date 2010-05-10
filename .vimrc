@@ -58,6 +58,20 @@ cabbrev WQ wq
 cabbrev Q q
 cabbrev W w
 cabbrev E e
+cabbrev Bw bw
+cabbrev BW bw
+cabbrev bW bw
+cabbrev Bn bn
+cabbrev BN bn
+cabbrev bN bn
+cabbrev Bp bp
+cabbrev BP bp
+cabbrev bP bp
+cabbrev Qall qall
+
+"""""" Disabled commands due to fat fingers
+" Shift Enter
+map <S-CR> <Nop>
 
 
 """""" GUI stuff
