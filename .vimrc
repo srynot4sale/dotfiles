@@ -39,10 +39,6 @@ set tabstop=4
 set shiftwidth=4
 
 
-"""""" White space
-autocmd BufWritePre * :%s/\s\+$//e
-
-
 """""" PHP stuff
 " highlights html inside of php strings
 autocmd FileType php let php_htmlInStrings=1
