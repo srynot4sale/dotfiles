@@ -16,25 +16,18 @@ set ignorecase
 """""" Indentation
 " When moving to next line, autoident to same level
 set autoindent
-
 " Load file specific indenting pluging
 filetype plugin indent on
-
 " Expand tabs to spaces
 set expandtab
-
 " Insert spaces for tabs according to shiftwidth
 set smarttab
-
 " Use indent from current line when starting a new one
 set autoindent
-
 " Don't use c style indenting
 set nocindent
-
 " Number of spaces in a tab
 set tabstop=4
-
 " Number of space for each indent
 set shiftwidth=4
 
@@ -64,6 +57,7 @@ cabbrev Bp bp
 cabbrev BP bp
 cabbrev bP bp
 cabbrev Qall qall
+
 
 """""" Disabled commands due to fat fingers
 " Shift Enter
