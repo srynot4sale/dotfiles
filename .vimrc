@@ -32,6 +32,12 @@ set tabstop=4
 set shiftwidth=4
 
 
+"""""" White space
+" Highlight whitespace at the end of lines
+au InsertEnter * match Error /\s\+\%#\@<!$/
+au InsertLeave * match Error /\s\+$/
+
+
 """""" PHP stuff
 " highlights html inside of php strings
 autocmd FileType php let php_htmlInStrings=1
