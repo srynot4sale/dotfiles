@@ -1,0 +1,16 @@
+[color]
+    ui = auto
+
+[user]
+    name = Aaron Barnes
+    email = aaronb@catalyst.net.nz
+
+[alias]
+    cdiff = diff --cached
+    co = checkout
+    cp = cherry-pick
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    track = checkout --track
+
+[push]
+    default = tracking
