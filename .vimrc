@@ -4,44 +4,30 @@
 
 """""" Generics
 set nocompatible
-" Change mapleader from \ to ,
-let mapleader=","
-" When changing buffers, do not close (forcing a save) but hide
-set hidden
+let mapleader=","               " Change mapleader from \ to ,
+set hidden                      " When changing buffers, do not close (forcing a save) but hide
 
 
 """""" Syntax stuff
 syntax enable
-" Show matching parenthesis
-set showmatch
-" Show line numbers
-set nu
+set showmatch                   " Show matching parenthesis
+set nu                          " Show line numbers
 
 
 """""" Search
-" Display the match for a search pattern when halfway typing it
-set incsearch
-" Ignore case while searching
-set ignorecase
+set incsearch                   " Display the match for a search pattern when halfway typing it
+set ignorecase                  " Ignore case while searching
 
 
 """""" Indentation
-" When moving to next line, autoident to same level
-set autoindent
-" Load file specific indenting pluging
-filetype plugin indent on
-" Expand tabs to spaces
-set expandtab
-" Insert spaces for tabs according to shiftwidth
-set smarttab
-" Use indent from current line when starting a new one
-set autoindent
-" Don't use c style indenting
-set nocindent
-" Number of spaces in a tab
-set tabstop=4
-" Number of space for each indent
-set shiftwidth=4
+set autoindent                  " When moving to next line, autoident to same level
+filetype plugin indent on       " Load file specific indenting pluging
+set expandtab                   " Expand tabs to spaces
+set smarttab                    " Insert spaces for tabs according to shiftwidth
+set autoindent                  " Use indent from current line when starting a new one
+set nocindent                   " Don't use c style indenting
+set tabstop=4                   " Number of spaces in a tab
+set shiftwidth=4                " Number of space for each indent
 
 
 """""" White space
