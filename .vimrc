@@ -71,7 +71,7 @@ map <S-CR> <Nop>
 
 
 """""" GUI stuff
-colorscheme darkspectrum
+colorscheme mustang
 set guioptions-=T
 set gfn=DejaVu\ Sans\ Mono\ 8
 
