@@ -41,6 +41,8 @@ au InsertLeave * match Error /\s\+$/
 
 """""" Editing
 set backspace=indent,eol,start
+set list
+set listchars=extends:#
 
 
 """""" PHP stuff
