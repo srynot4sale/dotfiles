@@ -6,6 +6,7 @@
 set nocompatible
 let mapleader=","               " Change mapleader from \ to ,
 set hidden                      " When changing buffers, do not close (forcing a save) but hide
+set nobackup                    " Don't create backup files
 
 
 """""" Syntax stuff
@@ -28,6 +29,8 @@ set autoindent                  " Use indent from current line when starting a n
 set nocindent                   " Don't use c style indenting
 set tabstop=4                   " Number of spaces in a tab
 set shiftwidth=4                " Number of space for each indent
+set shiftround                  " Use multiple of shiftwidth when indenting with < and >
+set copyindent                  " Copy the previous indentation on autoindenting
 
 
 """""" White space
