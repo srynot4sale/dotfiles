@@ -73,6 +73,10 @@ cabbrev Qall qall
 """""" Keyboard remapping
 " Disable Shift Enter due to fat fingers
 map <S-CR> <Nop>
+" Make ; another : - no more shift needed!
+nnoremap ; :
+" Disable : to force me to change my behaviour
+nnoremap : <nop>
 
 
 """""" GUI stuff
