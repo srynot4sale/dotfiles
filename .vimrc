@@ -81,7 +81,7 @@ nnoremap ; :
 " Disable : to force me to change my behaviour
 nnoremap : <nop>
 " Set ,/ to hid search hilights
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> ,/ ;nohlsearch<CR>
 
 
 """""" GUI stuff
