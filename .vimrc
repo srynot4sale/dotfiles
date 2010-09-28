@@ -70,15 +70,28 @@ cabbrev bP bp
 cabbrev Qall qall
 
 
-"""""" Disabled commands due to fat fingers
-" Shift Enter
+"""""" Keyboard remapping
+" Disable Shift Enter due to fat fingers
 map <S-CR> <Nop>
 
 
 """""" GUI stuff
-colorscheme mustang
-set guioptions-=T
-set gfn=DejaVu\ Sans\ Mono\ 8
+if &t_Co >= 256 || has("gui_running")
+   colorscheme mustang          " If gvim, or terminal has 256+ colors
+endif
+
+if has("gui_running")
+    set guioptions-=T
+    set gfn=DejaVu\ Sans\ Mono\ 8
+endif
+
+au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
+
+
+"""""" Terminal stuff
+set title                       " Change terminal's title
+set visualbell                  " No bell
+set noerrorbells                " No bell
 
 
 """""" Scroll with context
