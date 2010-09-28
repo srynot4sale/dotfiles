@@ -18,6 +18,7 @@ set nu                          " Show line numbers
 """""" Search
 set incsearch                   " Display the match for a search pattern when halfway typing it
 set ignorecase                  " Ignore case while searching
+set hlsearch                    " Highlight search terms
 
 
 """""" Indentation
@@ -79,6 +80,8 @@ map <S-CR> <Nop>
 nnoremap ; :
 " Disable : to force me to change my behaviour
 nnoremap : <nop>
+" Set ,/ to hid search hilights
+nmap <silent> ,/ :nohlsearch<CR>
 
 
 """""" GUI stuff
