@@ -1,3 +1,15 @@
+" Inspiration
+" - http://github.com/nvie/vimrc/blob/master/vimrc
+
+
+"""""" Generics
+set nocompatible
+" Change mapleader from \ to ,
+let mapleader=","
+" When changing buffers, do not close (forcing a save) but hide
+set hidden
+
+
 """""" Syntax stuff
 syntax enable
 " Show matching parenthesis
@@ -36,6 +48,10 @@ set shiftwidth=4
 " Highlight whitespace at the end of lines
 au InsertEnter * match Error /\s\+\%#\@<!$/
 au InsertLeave * match Error /\s\+$/
+
+
+"""""" Editing
+set backspace=indent,eol,start
 
 
 """""" PHP stuff
