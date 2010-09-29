@@ -1,0 +1,4 @@
+vbell off
+
+caption always
+caption string "%{=wk}[%0c][%n:%t]%?[%h]%?%=%H"
