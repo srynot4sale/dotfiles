@@ -49,6 +49,18 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 
+"""""" Fancy statusbar (from http://gist.github.com/187825)
+set laststatus=2                " Always show the last status
+set statusline=
+set statusline+=%f "path to the file in the buffer, relative to current directory
+set statusline+=\ %h%1*%m%r%w%0* " flag
+set statusline+=\ [%{strlen(&ft)?&ft:'none'}, " filetype
+set statusline+=%{&encoding}, " encoding
+set statusline+=%{&fileformat}] " file format
+set statusline+=\ CWD:%r%{getcwd()}%h
+set statusline+=\ Line:%l/%L
+
+
 """""" PHP stuff
 " highlights html inside of php strings
 autocmd FileType php let php_htmlInStrings=1
