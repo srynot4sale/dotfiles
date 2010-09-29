@@ -124,8 +124,8 @@ set noerrorbells                " No bell
 
 
 """""" Scroll with context
-set scrolloff=3
-set sidescrolloff=3
+set scrolloff=10
+set sidescrolloff=10
 
 
 """"""""""""""""""""""""""""""""""
