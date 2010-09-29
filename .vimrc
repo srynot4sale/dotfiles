@@ -44,6 +44,9 @@ au InsertLeave * match Error /\s\+$/
 set backspace=indent,eol,start
 set list                        " Highlight invisible characters
 set listchars=extends:#         " Display a # at the end of wrapping lines
+" Highlight the line the cursor is on in the current window only
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 
 """""" PHP stuff
