@@ -42,8 +42,8 @@ au InsertLeave * match Error /\s\+$/
 
 """""" Editing
 set backspace=indent,eol,start
-set list
-set listchars=extends:#
+set list                        " Highlight invisible characters
+set listchars=extends:#         " Display a # at the end of wrapping lines
 
 
 """""" PHP stuff
