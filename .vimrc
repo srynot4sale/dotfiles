@@ -86,17 +86,22 @@ cabbrev Bp bp
 cabbrev BP bp
 cabbrev bP bp
 cabbrev Qall qall
+" Disable Shift Enter due to fat fingers
+map <S-CR> <Nop>
 
 
 """""" Keyboard remapping
-" Disable Shift Enter due to fat fingers
-map <S-CR> <Nop>
 " Make ; another : - no more shift needed!
 nnoremap ; :
 " Disable : to force me to change my behaviour
 nnoremap : <nop>
 " Set ,/ to hid search hilights
 nmap <silent> ,/ ;nohlsearch<CR>
+" Make arrow keys useful again
+map <down> <ESC>;bn<RETURN>
+map <up> <ESC>;bp<RETURN>
+map <left> <ESC><C-W><left>
+map <right> <ESC><C-W><right>
 
 
 """""" GUI stuff
