@@ -7,6 +7,7 @@ set nocompatible
 let mapleader=","               " Change mapleader from \ to ,
 set hidden                      " When changing buffers, do not close (forcing a save) but hide
 set nobackup                    " Don't create backup files
+set wildmode=longest,list       " Tab-completion link bash
 
 
 """""" Syntax stuff
