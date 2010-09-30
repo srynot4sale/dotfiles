@@ -95,7 +95,7 @@ map <S-CR> <Nop>
 " Make ; another : - no more shift needed!
 nnoremap ; :
 " Disable : to force me to change my behaviour
-nnoremap : <nop>
+"nnoremap : <nop>
 " Set ,/ to hid search hilights
 nmap <silent> ,/ ;nohlsearch<CR>
 " Make arrow keys useful again
