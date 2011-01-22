@@ -11,6 +11,8 @@
     cp = cherry-pick
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     track = checkout --track
+    ll = log -n1
+    cmt = commit -v
 
 [push]
     default = tracking
