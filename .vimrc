@@ -112,7 +112,7 @@ endif
 
 if has("gui_running")
     set guioptions-=T
-    set gfn=DejaVu\ Sans\ Mono\ 8
+    set gfn=DejaVu\ Sans\ Mono\ 9
 endif
 
 au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
