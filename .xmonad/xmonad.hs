@@ -77,7 +77,7 @@ myModMask       = mod4Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10","11","12"]
  
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -157,6 +157,20 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
  
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+
+    -- custom keybindings
+    -- extra workspaces
+    , ((modm, xK_0), windows $ W.greedyView "10")
+    , ((shiftMask .|. modm, xK_0), windows $ W.shift "10")
+
+    , ((modm, xK_minus), windows $ W.greedyView "11")
+    , ((shiftMask .|. modm, xK_minus), windows $ W.shift "11")
+
+    , ((modm, xK_equal), windows $ W.greedyView "12")
+    , ((shiftMask .|. modm, xK_equal), windows $ W.shift "12")
+
+    -- play toggling banshee
+    , ((modm, xK_Pause), spawn "banshee --toggle-playing")
     ]
     ++
  
@@ -176,7 +190,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+--        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+--
+--        swap order of w/e as they do not work as expect on my setup
+        | (key, sc) <- zip [xK_e, xK_w, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
  
  
