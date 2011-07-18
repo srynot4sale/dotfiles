@@ -1,5 +1,6 @@
 [color]
-    ui = auto
+    ui = true
+    pager = true
 
 [user]
     name = Aaron Barnes
