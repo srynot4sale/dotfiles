@@ -4,4 +4,20 @@ function parse_git_dirty {
     [[ $(__git_ps1) != "" ]] && [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;32m\](\u) \[\033[01;34m\]\w\[\033[01;32m\]$(__git_ps1 " %s")\[\033[01;34m\]$(parse_git_dirty) \[\033[01;31m\]>\[\033[00m\] '
+# Code taken from https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+function maxlength_pwd {
+    local pwdmaxlen=25
+    local trunc_symbol=".."
+    local dir=${PWD##*/}
+    pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
+    NEW_PWD=${PWD/#$HOME/\~}
+    local pwdoffset=$(( ${#NEW_PWD} - pwdmaxlen ))
+    if [ ${pwdoffset} -gt "0" ]
+    then
+        NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
+        NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
+    fi
+    echo "$NEW_PWD"
+}
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;32m\](\u) \[\033[01;34m\]$(maxlength_pwd)\[\033[01;32m\]$(__git_ps1 " %s")\[\033[01;34m\]$(parse_git_dirty) \[\033[01;31m\]>\[\033[00m\] '
