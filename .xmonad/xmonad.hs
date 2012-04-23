@@ -263,8 +263,9 @@ myLayout = avoidStruts(Mirror tiled ||| tiled ||| noBorders Full)
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "MPlayer"        --> doFloat
+    [ className =? "VLC"            --> doFloat
     , className =? "Gimp"           --> doFloat
+    ,(className =? "Firefox"        <&&> resource =? "Dialog") --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
  
