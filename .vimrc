@@ -75,6 +75,9 @@ autocmd FileType php let php_htmlInStrings=1
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
+" consider *.js.php as JS files
+au BufNewFile,BufRead *.js.php set filetype=javascript
+
 
 """""" Fix typos
 cabbrev Wq wq
