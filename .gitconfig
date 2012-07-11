@@ -19,7 +19,7 @@
     amend = commit --amend
     ament = commit --amend
     branchr = config --get branch.master.remote
-    reverse = reset --hard HEAD~1
+    reverse = reset --merge HEAD~1
 
 [push]
     default = tracking
