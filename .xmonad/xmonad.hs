@@ -169,8 +169,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm, xK_equal), windows $ W.greedyView "12")
     , ((shiftMask .|. modm, xK_equal), windows $ W.shift "12")
 
-    -- play toggling banshee
-    , ((modm, xK_Pause), spawn "banshee --toggle-playing")
+    -- start screen saver
+    , ((modm, xK_Pause), spawn "xscreensaver-command --lock")
     ]
     ++
  
@@ -295,7 +295,7 @@ myEventHook = mempty
 -- It will add EWMH logHook actions to your custom log hook by
 -- combining it with ewmhDesktopsLogHook.
 --
-myLogHook = return ()
+myLogHook = dynamicLogXinerama
  
 ------------------------------------------------------------------------
 -- Startup hook

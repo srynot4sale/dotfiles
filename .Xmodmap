@@ -3,3 +3,6 @@ clear lock
 
 !! Make Caps Lock an escape key
 keycode 0x42 = Escape
+
+!! Make multimedia pause work
+keycode 164 = XF86AudioPlay

@@ -1,7 +1,7 @@
 Config { font = "xft:DejaVu Sans-8:"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = Top
+       , position = TopW L 90
        , lowerOnStart = True
        , commands = [ Run StdinReader
                     , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
@@ -12,5 +12,5 @@ Config { font = "xft:DejaVu Sans-8:"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% / %memory% * %swap% / %eth0% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% / %swap% | %eth0% | <fc=#ee9a00>%date%</fc> "
 }
