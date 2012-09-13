@@ -1,7 +1,3 @@
-" Inspiration
-" - http://github.com/nvie/vimrc/blob/master/vimrc
-
-
 """""" Generics
 set nocompatible
 let mapleader=","               " Change mapleader from \ to ,
@@ -9,6 +5,14 @@ set hidden                      " When changing buffers, do not close (forcing a
 set nobackup                    " Don't create backup files
 set wildmode=longest,list       " Tab-completion link bash
 
+
+"""""" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/syntastic'
+" Let Vundle manage Vundle
 
 """""" Syntax stuff
 syntax enable
