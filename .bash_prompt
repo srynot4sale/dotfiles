@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. /usr/share/git/git-prompt.sh
+
 function parse_git_dirty {
     [[ $(__git_ps1) != "" ]] && [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
