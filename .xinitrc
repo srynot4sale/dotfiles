@@ -9,6 +9,8 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true \
 /usr/lib/gnome-settings-daemon/gnome-settings-daemon &
 
 eval $(gnome-keyring-daemon)
+export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
 export GNOME-KEYRING-SOCKET
 export GNOME-KEYRING-PID
 
