@@ -3,7 +3,7 @@
 xrdb -merge ~/.Xresources &
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 5 --transparent false --tint 0xffffff --height 15 &
+ --expand true --width 5 --transparent true --tint 0x000000 --height 17 --alpha 0 &
 
 /usr/bin/xscreensaver -no-splash &
 /usr/lib/gnome-settings-daemon/gnome-settings-daemon &
