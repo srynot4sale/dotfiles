@@ -2,10 +2,6 @@
 
 . /usr/share/git/git-prompt.sh
 
-function parse_git_dirty {
-    [[ $(__git_ps1) != "" ]] && [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-
 # Code taken from https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 function maxlength_pwd {
     local pwdmaxlen=25
@@ -22,4 +18,4 @@ function maxlength_pwd {
     echo "$NEW_PWD"
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;32m\](\u) \[\033[01;34m\]$(maxlength_pwd)\[\033[01;32m\]$(__git_ps1 " %s")\[\033[01;34m\]$(parse_git_dirty) \[\033[01;31m\]>\[\033[00m\] '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;32m\](\u) \[\033[01;34m\]$(maxlength_pwd)\[\033[01;32m\]$(__git_ps1 " %s") \[\033[01;31m\]>\[\033[00m\] '
