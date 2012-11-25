@@ -71,29 +71,32 @@ layouts = [
 # BOTTOM: Group box, Window name, Clock
 screens = [
     Screen(
-        top = bar.Bar([widget.CPUGraph(width=bar.STRETCH,
-                                       graph_color='0066FF',
-                                       fill_color='001188'),
-                       widget.CurrentLayout(fontsize=18, padding=6),
-                       widget.Systray()],
-                       26),
-        bottom = bar.Bar([widget.GroupBox(fontsize=16, margin_y=0),
-                          widget.Sep(height_percent=100, linewidth=3),
-                          widget.WindowName(fontsize=16, padding=24),
-                          widget.Sep(height_percent=100, linewidth=3),
-                          widget.Clock('%H:%M %d/%m/%y',
-                                       fontsize=16, padding=6)],
-                          30,),
+        bottom = bar.Bar(
+            [
+                widget.GroupBox(fontsize=16, margin_y=0),
+                widget.Sep(height_percent=100, linewidth=2),
+                widget.WindowName(fontsize=16, padding=24),
+                widget.CurrentLayout(fontsize=18, padding=6),
+                widget.Sep(height_percent=100, linewidth=2),
+                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=16, padding=6),
+            ],
+            30,
+        ),
     ),
 
     Screen(
-        bottom = bar.Bar([widget.GroupBox(fontsize=16, margin_y=0),
-                          widget.Sep(height_percent=100, linewidth=3),
-                          widget.WindowName(fontsize=16, padding=24),
-                          widget.Sep(height_percent=100, linewidth=3),
-                          widget.Clock('%H:%M %d/%m/%y',
-                                       fontsize=16, padding=6)],
-                          30,),
+        bottom = bar.Bar(
+            [
+                widget.GroupBox(fontsize=16, margin_y=0),
+                widget.Sep(height_percent=100, linewidth=2),
+                widget.WindowName(fontsize=16, padding=24),
+                widget.CurrentLayout(fontsize=18, padding=6),
+                widget.Systray(),
+                widget.Sep(height_percent=100, linewidth=2),
+                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=16, padding=6),
+            ],
+            30,
+        ),
     ),
 ]
 
