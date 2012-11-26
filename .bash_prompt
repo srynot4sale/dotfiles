@@ -1,6 +1,8 @@
 #!/bin/bash
 
-. /usr/share/git/git-prompt.sh
+if [ -f /usr/share/git/git-prompt.sh ]; then
+    . /usr/share/git/git-prompt.sh
+fi
 
 # Code taken from https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 function maxlength_pwd {
