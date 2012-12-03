@@ -47,16 +47,24 @@ mouse = [
 # Each available on the left home and under rows
 groups = [
     Group("1"), Group("2"), Group("3"), Group("4"), Group("5"), Group("6"),
-    Group("7"), Group("8"), Group("9"), Group("0"), Group("minus"), Group("equal")
+    Group("7"), Group("8"), Group("9"), Group("0"), Group("-"), Group("=")
 ]
 for i in groups:
+
+    if i.name == "-":
+        ikey = "minus"
+    elif i.name == "=":
+        ikey = "equal"
+    else:
+        ikey = i.name
+
     # switch to group
     keys.append(
-        Key([modkey], i.name, lazy.group[i.name].toscreen())
+        Key([modkey], ikey, lazy.group[i.name].toscreen())
     )
     # move tile to group
     keys.append(
-        Key([modkey, "shift"], i.name, lazy.window.togroup(i.name))
+        Key([modkey, "shift"], ikey, lazy.window.togroup(i.name))
     )
 
 
