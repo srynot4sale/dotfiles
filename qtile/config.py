@@ -5,6 +5,9 @@ from libqtile import layout, bar, widget, hook
 from libqtile.layout.xmonad import MonadTall
 
 modkey = "mod4"
+screen_left = 1
+screen_right = 0
+
 
 keys = [
     # application shortcuts
@@ -30,6 +33,8 @@ keys = [
     Key([modkey], "n", lazy.layout.normalize()), # equalize tiles
     Key([modkey], "o", lazy.layout.maximize()), # maximize tile
     Key([modkey, "shift"], "space", lazy.layout.flip()), # flip orientation
+    Key([modkey], "w", lazy.to_screen(screen_left)),
+    Key([modkey], "e", lazy.to_screen(screen_right)),
 ]
 
 mouse = [
