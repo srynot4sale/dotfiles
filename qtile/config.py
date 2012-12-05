@@ -99,6 +99,7 @@ screens = [
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.WindowName(fontsize=16, padding=24),
                 widget.CurrentLayout(fontsize=18, padding=6),
+                widget.Notify(),
                 widget.Systray(),
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.Clock('%H:%M:%S %d/%m/%y', fontsize=16, padding=6),
