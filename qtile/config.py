@@ -28,8 +28,8 @@ keys = [
     Key([modkey], "j", lazy.layout.up()), # focus right
     Key([modkey, "shift"], "k", lazy.layout.shuffle_down()), # move tile left
     Key([modkey, "shift"], "j", lazy.layout.shuffle_up()), # move tile right
-    Key([modkey], "l", lazy.layout.grow()), # increase tile size
-    Key([modkey], "h", lazy.layout.shrink()), # decrease tile size
+    Key([modkey], "h", lazy.layout.grow()), # increase tile size
+    Key([modkey], "l", lazy.layout.shrink()), # decrease tile size
     Key([modkey], "n", lazy.layout.normalize()), # equalize tiles
     Key([modkey], "o", lazy.layout.maximize()), # maximize tile
     Key([modkey, "shift"], "space", lazy.layout.flip()), # flip orientation
