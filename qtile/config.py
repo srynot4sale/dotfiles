@@ -22,6 +22,7 @@ keys = [
     Key([modkey, "shift"], "c", lazy.window.kill()), # kill window
     Key([modkey, "shift"], "r", lazy.restart()), # restart qtile
     Key([modkey, "shift"], "q", lazy.shutdown()), # kill qtile
+    Key([modkey, "shift"], "l", lazy.spawn("dm-tool switch-to-greeter")), # start user-switcher
 
     # layout controls
     Key([modkey], "k", lazy.layout.down()), # focus left
