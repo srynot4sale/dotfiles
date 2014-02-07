@@ -86,12 +86,15 @@ screens = [
     Screen(
         bottom = bar.Bar(
             [
-                widget.GroupBox(fontsize=16, margin_y=0),
+                widget.GroupBox(fontsize=14, margin_y=0, padding=7, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.WindowName(fontsize=16, padding=24),
-                widget.CurrentLayout(fontsize=18, padding=6),
+                widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
+                widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
+                widget.CPUGraph(),
+                widget.MemoryGraph(),
+                widget.NetGraph(),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=16, padding=6),
+                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
             ],
             30,
         ),
@@ -100,14 +103,14 @@ screens = [
     Screen(
         bottom = bar.Bar(
             [
-                widget.GroupBox(fontsize=16, margin_y=0),
+                widget.GroupBox(fontsize=14, margin_y=0, padding=7, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.WindowName(fontsize=16, padding=24),
-                widget.CurrentLayout(fontsize=18, padding=6),
+                widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
+                widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
                 widget.Notify(),
                 widget.Systray(),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=16, padding=6),
+                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
             ],
             30,
         ),
