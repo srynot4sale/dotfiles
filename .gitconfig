@@ -27,3 +27,6 @@
 [core]
     pager = less -r
     editor = vim
+
+[merge]
+    renamelimit = 100000
