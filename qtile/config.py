@@ -21,7 +21,7 @@ keys = [
     Key([modkey, "shift"], "t", lazy.window.enable_floating()), # pop tile
     Key([modkey, "shift"], "c", lazy.window.kill()), # kill window
     Key([modkey, "shift"], "r", lazy.restart()), # restart qtile
-    Key([modkey, "shift"], "l", lazy.shutdown()), # kill qtile
+    Key([modkey, "shift"], "q", lazy.shutdown()), # kill qtile
 
     # layout controls
     Key([modkey], "k", lazy.layout.down()), # focus left
