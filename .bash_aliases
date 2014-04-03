@@ -18,7 +18,7 @@ alias mv='mv -i'
 alias g='git'
 alias s='git status'
 alias log='git log'
-alias gg='git for-each-ref --sort=-committerdate refs/heads/ --format='"'"'%(refname)%09%(committername)%09%(committerdate)%09%(contents:subject)'"'"' | sed '"'"'s/refs\/heads\///g'"'"' | head -20'
+alias gg='git for-each-ref --sort=-committerdate refs/heads/ --format='"'"'%(refname)%09%(committername)%09%(committerdate)%09%(contents:subject)'"'"' | sed '"'"'s/refs\/heads\///g'"'"' | head'
 
 # Generate random pwd
 alias pwdgen='gpg --gen-random --armor 1 9'
