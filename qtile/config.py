@@ -74,10 +74,17 @@ for i in groups:
     )
 
 
-# Two simple layout instances:
+# Layout config
+layout_theme = {
+    "border_width": 1,
+    "margin": 0,
+    "border_focus": "#66CCCC",
+    "border_normal": "#555555"
+}
+
 layouts = [
-    layout.Max(),
-    MonadTall(),
+    layout.Max(**layout_theme),
+    MonadTall(**layout_theme),
 ]
 
 # Single screen
