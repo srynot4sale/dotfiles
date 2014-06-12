@@ -48,6 +48,11 @@ set ttymouse=xterm2
 " Highlight whitespace at the end of lines
 au InsertEnter * match Error /\s\+\%#\@<!$/
 au InsertLeave * match Error /\s\+$/
+" Highlight exclaimation marks
+au BufRead * match Error /!/
+au FileChangedShell * match Error /!/
+au InsertEnter * match Error /!/
+au InsertLeave * match Error /!/
 
 
 """""" Editing
