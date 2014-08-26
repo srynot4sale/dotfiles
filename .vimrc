@@ -14,6 +14,20 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 " Let Vundle manage Vundle
 
+
+"""""" GUI stuff
+if &t_Co >= 256 || has("gui_running")
+   colorscheme mustang          " If gvim, or terminal has 256+ colors
+endif
+
+if has("gui_running")
+    set guioptions-=T
+    set gfn=DejaVu\ Sans\ Mono\ 9
+endif
+
+au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
+
+
 """""" Syntax stuff
 syntax enable
 set showmatch                   " Show matching parenthesis
@@ -46,25 +60,24 @@ set ttymouse=xterm2
 
 """""" White space
 " Highlight whitespace at the end of lines
-au InsertEnter * match Error /\s\+\%#\@<!$/
-au InsertLeave * match Error /\s\+$/
-" Highlight exclaimation marks
-au BufRead * match Error /!/
-au FileChangedShell * match Error /!/
-au InsertEnter * match Error /!/
-au InsertLeave * match Error /!/
+hi ExtraWhitespace ctermbg=red guibg=red
+call matchadd('ExtraWhitespace', '\s\+\%#\@<!$')
 
+" Highlight exclaimation marks
+hi ExclaimationMarks ctermbg=red guibg=red
+call matchadd('ExclaimationMarks', '!')
 
 """""" Editing
 set backspace=indent,eol,start
 set list                        " Highlight invisible characters
 set listchars=extends:#         " Display a # at the end of wrapping lines
 " Highlight the line the cursor is on in the current window only
-hi CursorLine   cterm=None ctermbg=darkgrey ctermfg=None guibg=darkgrey guifg=None
-hi CursorColumn cterm=None ctermbg=darkgrey ctermfg=None guibg=darkgrey guifg=None
+hi CursorLine   cterm=None ctermbg=black ctermfg=None guibg=black guifg=None
+hi CursorColumn cterm=None ctermbg=black ctermfg=None guibg=black guifg=None
 au BufRead * set cursorline
 au InsertEnter * set cursorline
 au InsertLeave * set cursorline
+au ColorScheme * set cursorline
 
 
 """""" Fancy statusbar (from http://gist.github.com/187825)
@@ -125,19 +138,6 @@ map <down> <ESC>;bn<RETURN>
 map <up> <ESC>;bp<RETURN>
 map <left> <ESC><C-W><left>
 map <right> <ESC><C-W><right>
-
-
-"""""" GUI stuff
-if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang          " If gvim, or terminal has 256+ colors
-endif
-
-if has("gui_running")
-    set guioptions-=T
-    set gfn=DejaVu\ Sans\ Mono\ 9
-endif
-
-au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
 
 
 """""" Terminal stuff
