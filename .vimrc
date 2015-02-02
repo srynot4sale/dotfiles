@@ -64,7 +64,7 @@ hi ExtraWhitespace ctermbg=red guibg=red
 call matchadd('ExtraWhitespace', '\s\+\%#\@<!$')
 
 " Highlight exclaimation marks
-hi ExclaimationMarks ctermbg=red guibg=red
+hi ExclaimationMarks ctermbg=red guibg=red ctermfg=white guifg=white
 call matchadd('ExclaimationMarks', '!')
 
 """""" Editing
