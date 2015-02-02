@@ -19,6 +19,13 @@ alias g='git'
 alias s='git status'
 alias log='git log'
 alias gg='git for-each-ref --sort=-committerdate refs/heads/ --format='"'"'%(refname)%09%(committername)%09%(committerdate)%09%(objectname:short)%09%(contents:subject)'"'"' | sed '"'"'s/refs\/heads\///g'"'"' | column -t -s '"$'\t'"' | head'
+alias gcb='__git_ps1 "%s"'
+alias psqlg='psql $(gcb)'
+
 
 # Generate random pwd
 alias pwdgen='gpg --gen-random --armor 1 9'
+
+cws() {
+    pushd /home/aaronb/code/www/moodle/$1/htdocs
+}
