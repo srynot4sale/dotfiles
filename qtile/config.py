@@ -129,6 +129,7 @@ screens = [
 # float dialog windows
 @hook.subscribe.client_new
 def dialogs(window):
-    if window.window.get_wm_type() == 'dialog' or window.window.get_wm_transient_for():
+    dialog_classes = ['dialog', 'confirm', 'error', 'ssh-askpass', 'pinentry']
+    if window.window.get_wm_type() in dialog_classes or window.window.get_wm_transient_for():
         window.floating = True
 
