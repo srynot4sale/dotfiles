@@ -72,8 +72,8 @@ set backspace=indent,eol,start
 set list                        " Highlight invisible characters
 set listchars=extends:#         " Display a # at the end of wrapping lines
 " Highlight the line the cursor is on in the current window only
-hi CursorLine   cterm=None ctermbg=black ctermfg=None guibg=black guifg=None
-hi CursorColumn cterm=None ctermbg=black ctermfg=None guibg=black guifg=None
+hi CursorLine   ctermbg=black guibg=black
+hi CursorColumn ctermbg=black guibg=black
 au BufRead * set cursorline
 au InsertEnter * set cursorline
 au InsertLeave * set cursorline
