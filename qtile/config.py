@@ -11,8 +11,8 @@ screen_right = 0
 
 keys = [
     # application shortcuts
-    Key([modkey], "p", lazy.spawn("exe=`/home/aaronb/.cabal/bin/yeganesh` && eval \"exec $exe\"")),
-    Key([modkey, "shift"], "Return", lazy.spawn("urxvt")),
+    Key([modkey], "p", lazy.spawncmd()),
+    Key([modkey, "shift"], "Return", lazy.spawn("gnome-terminal")),
     Key([modkey], "Pause", lazy.spawn("xscreensaver-command --lock")),
 
     # high-level management
@@ -114,6 +114,7 @@ screens = [
                 widget.GroupBox(fontsize=14, margin_y=0, padding=7, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
+                widget.Prompt(fontsize=14, padding=24, font="DejaVu Sans Mono", prompt=""),
                 widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
                 widget.Notify(),
                 widget.Systray(),
