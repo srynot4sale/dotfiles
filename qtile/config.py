@@ -8,12 +8,18 @@ modkey = "mod4"
 screen_left = 1
 screen_right = 0
 
+lock_command = "xscreensaver-command --lock"
+
 
 keys = [
     # application shortcuts
     Key([modkey], "p", lazy.spawncmd()),
     Key([modkey, "shift"], "Return", lazy.spawn("gnome-terminal")),
-    Key([modkey], "Pause", lazy.spawn("xscreensaver-command --lock")),
+
+    # start user-switcher
+    Key([modkey], "Pause", lazy.spawn(lock_command)),
+    Key(["control", "mod1"], "l", lazy.spawn(lock_command)),
+    Key([modkey, "shift"], "l", lazy.spawn(lock_command)),
 
     # high-level management
     Key([modkey], "space", lazy.nextlayout()), # cycle layouts
@@ -22,7 +28,6 @@ keys = [
     Key([modkey, "shift"], "c", lazy.window.kill()), # kill window
     Key([modkey, "shift"], "r", lazy.restart()), # restart qtile
     Key([modkey, "shift"], "q", lazy.shutdown()), # kill qtile
-    Key([modkey, "shift"], "l", lazy.spawn("dm-tool switch-to-greeter")), # start user-switcher
 
     # layout controls
     Key([modkey], "k", lazy.layout.down()), # focus left
