@@ -1,5 +1,5 @@
 [color]
-    ui = true
+    ui = always
     pager = true
 
 [user]
