@@ -8,7 +8,7 @@ modkey = "mod4"
 screen_left = 1
 screen_right = 0
 
-lock_command = "xscreensaver-command --lock"
+lock_command = "dm-tool switch-to-greeter"
 
 
 keys = [
@@ -102,6 +102,9 @@ screens = [
                 widget.GroupBox(fontsize=14, margin_y=0, padding=7, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
+                widget.Prompt(fontsize=14, padding=24, font="DejaVu Sans Mono", prompt=""),
+                widget.Notify(),
+                widget.Systray(),
                 widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
                 widget.CPUGraph(),
                 widget.MemoryGraph(),
@@ -119,10 +122,7 @@ screens = [
                 widget.GroupBox(fontsize=14, margin_y=0, padding=7, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
-                widget.Prompt(fontsize=14, padding=24, font="DejaVu Sans Mono", prompt=""),
                 widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
-                widget.Notify(),
-                widget.Systray(),
                 widget.Sep(height_percent=100, linewidth=2),
                 widget.Clock('%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
             ],
