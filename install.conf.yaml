@@ -1,0 +1,14 @@
+# Clean removes all broken symlinks from directory supplied
+- clean: ['~']
+
+- link:
+    ~/.config/fish/config.fish:
+        create: true
+        force: true
+        path: fish/config.fish
+    ~/.config/qtile: qtile/
+    ~/.gitconfig: .gitconfig
+    ~/.vimrc: .vimrc
+    ~/.vim: .vim/
+    ~/.xinitrc: .xinitrc
+    ~/.Xmodmap: .Xmodmap
