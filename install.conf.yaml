@@ -21,3 +21,5 @@
     ~/.vim: .vim/
     ~/.xinitrc: .xinitrc
     ~/.Xmodmap: .Xmodmap
+- shell:
+    - [omf install, Install oh-my-fish]
