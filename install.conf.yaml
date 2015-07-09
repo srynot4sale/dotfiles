@@ -6,6 +6,14 @@
         create: true
         force: true
         path: fish/config.fish
+    ~/.config/fish/custom:
+        create: true
+        force: true
+        path: fish/custom/
+    ~/.config/fish/omf:
+        create: true
+        force: true
+        path: fish/omf/
     ~/.config/qtile: qtile/
     ~/.gitconfig: .gitconfig
     ~/.vimrc: .vimrc
