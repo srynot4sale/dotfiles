@@ -1,6 +1,7 @@
 # Clean removes all broken symlinks from directory supplied
 - clean: ['~']
-
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
 - link:
     ~/.config/fish/config.fish:
         create: true
