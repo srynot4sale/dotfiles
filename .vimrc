@@ -54,8 +54,8 @@ set copyindent                  " Copy the previous indentation on autoindenting
 
 
 """""" Mouse support in vim
-set mouse=a
-set ttymouse=xterm2
+"set mouse=a
+"set ttymouse=xterm2
 
 
 """""" White space
