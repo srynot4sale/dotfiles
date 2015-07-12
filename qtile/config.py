@@ -16,20 +16,24 @@ keys = [
     Key([modkey], "p", lazy.spawncmd()),
     Key([modkey, "shift"], "Return", lazy.spawn("gnome-terminal")),
 
+    # audio shortcuts
+    Key([modkey], "Home", lazy.spawn("/usr/bin/pulseaudio-ctl mute")),
+    Key([modkey], "Page_Up", lazy.spawn("/usr/bin/pulseaudio-ctl up")),
+    Key([modkey], "Page_Down", lazy.spawn("/usr/bin/pulseaudio-ctl down")),
+
     # start user-switcher
     Key([modkey], "Pause", lazy.spawn(lock_command)),
     Key(["control", "mod1"], "l", lazy.spawn(lock_command)),
     Key([modkey, "shift"], "l", lazy.spawn(lock_command)),
 
     # high-level management
-    Key([modkey], "space", lazy.nextlayout()), # cycle layouts
-    Key([modkey], "t", lazy.window.disable_floating()), # embed float
-    Key([modkey, "shift"], "t", lazy.window.enable_floating()), # pop tile
     Key([modkey, "shift"], "c", lazy.window.kill()), # kill window
     Key([modkey, "shift"], "r", lazy.restart()), # restart qtile
     Key([modkey, "shift"], "q", lazy.shutdown()), # kill qtile
 
     # layout controls
+    Key([modkey], "t", lazy.window.disable_floating()), # embed float
+    Key([modkey, "shift"], "t", lazy.window.enable_floating()), # pop tile
     Key([modkey], "k", lazy.layout.down()), # focus left
     Key([modkey], "j", lazy.layout.up()), # focus right
     Key([modkey, "shift"], "k", lazy.layout.shuffle_down()), # move tile left
@@ -38,9 +42,10 @@ keys = [
     Key([modkey], "l", lazy.layout.shrink()), # decrease tile size
     Key([modkey], "n", lazy.layout.normalize()), # equalize tiles
     Key([modkey], "o", lazy.layout.maximize()), # maximize tile
-    Key([modkey, "shift"], "space", lazy.layout.flip()), # flip orientation
-    Key([modkey], "w", lazy.to_screen(screen_left)),
-    Key([modkey], "e", lazy.to_screen(screen_right)),
+    Key([modkey], "Tab", lazy.layout.toggle_split()),
+    Key([modkey], "space", lazy.next_layout()),
+    Key([modkey], "e", lazy.to_screen(screen_left)),
+    Key([modkey], "w", lazy.to_screen(screen_right)),
 ]
 
 mouse = [
@@ -90,11 +95,11 @@ layout_theme = {
 layouts = [
     layout.Max(**layout_theme),
     MonadTall(**layout_theme),
+    layout.Stack(num_stacks=2, **layout_theme),
+    layout.Tile(**layout_theme),
+    layout.Matrix(**layout_theme),
 ]
 
-# Single screen
-# TOP: Cpu graph, Current Layout, Systray
-# BOTTOM: Group box, Window name, Clock
 screens = [
     Screen(
         bottom = bar.Bar(
@@ -110,7 +115,7 @@ screens = [
                 widget.MemoryGraph(),
                 widget.NetGraph(),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
+                widget.Clock(format='%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
             ],
             30,
         ),
@@ -124,7 +129,7 @@ screens = [
                 widget.WindowName(fontsize=14, padding=24, font="DejaVu Sans Mono"),
                 widget.CurrentLayout(fontsize=14, padding=6, font="DejaVu Sans Mono"),
                 widget.Sep(height_percent=100, linewidth=2),
-                widget.Clock('%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
+                widget.Clock(format='%H:%M:%S %d/%m/%y', fontsize=14, padding=6, font="DejaVu Sans Mono"),
             ],
             30,
         ),
@@ -137,4 +142,3 @@ def dialogs(window):
     dialog_classes = ['dialog', 'confirm', 'error', 'ssh-askpass', 'pinentry']
     if window.window.get_wm_type() in dialog_classes or window.window.get_wm_transient_for():
         window.floating = True
-
