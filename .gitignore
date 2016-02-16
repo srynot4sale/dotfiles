@@ -1,4 +1,5 @@
 /.vim/.netrwhist
+/.vim/bundle/*
 /qtile/config.pyc
 /qtile/__pycache__
 /fish/fishd.*
