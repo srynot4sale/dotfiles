@@ -21,3 +21,4 @@
     - [sudo apt-get update && sudo apt-get install -y fish, Install Fish]
     - [fish -c "curl -sL get.fisherman.sh | fish", Install fisherman]
     - [fish -c "fisher install bobthefish", Install theme]
+    - [vim +PluginInstall +qall, Install vim plugins]
