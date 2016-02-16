@@ -11,14 +11,13 @@
         create: true
         force: true
         path: fish/custom/
-    ~/.config/fish/omf:
-        create: true
-        force: true
-        path: fish/omf/
     ~/.config/qtile: qtile/
     ~/.gitconfig: .gitconfig
     ~/.vim: .vim/
     ~/.xinitrc: .xinitrc
     ~/.Xmodmap: .Xmodmap
 - shell:
-    - [omf install, Install oh-my-fish]
+    - ["sudo add-apt-repository ppa:fish-shell/release-2", Add Fish PPA]
+    - [sudo apt-get update && sudo apt-get install -y fish, Install Fish]
+    - [fish -c "curl -sL get.fisherman.sh | fish", Install fisherman]
+    - [fish -c "fisher install bobthefish", Install theme]
