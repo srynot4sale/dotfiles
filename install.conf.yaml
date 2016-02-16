@@ -17,7 +17,6 @@
         path: fish/omf/
     ~/.config/qtile: qtile/
     ~/.gitconfig: .gitconfig
-    ~/.vimrc: .vimrc
     ~/.vim: .vim/
     ~/.xinitrc: .xinitrc
     ~/.Xmodmap: .Xmodmap
