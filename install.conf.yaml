@@ -22,3 +22,4 @@
     - [fish -c "curl -sL get.fisherman.sh | fish", Install fisherman]
     - [fish -c "fisher install bobthefish", Install theme]
     - [vim +PluginInstall +qall, Install vim plugins]
+    - [sudo pip install pgcli]
