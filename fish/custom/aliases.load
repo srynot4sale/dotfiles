@@ -16,3 +16,10 @@ alias decrypt_password '/home/aaronb/code/personal/dotfiles/decrypt_password.sh'
 
 alias b '/bin/bash'
 
+function sudo
+    if test "$argv" = !!
+        eval command sudo $history[1]
+    else
+        command sudo $argv
+    end
+end
