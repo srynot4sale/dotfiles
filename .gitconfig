@@ -1,6 +1,9 @@
 [color]
+    branch = auto
+    diff = auto
+    status = auto
+    showbranch = auto
     ui = always
-    pager = true
 
 [user]
     name = Aaron Barnes
