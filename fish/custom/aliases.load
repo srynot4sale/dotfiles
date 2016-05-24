@@ -8,12 +8,6 @@ alias gcb '__git_ps1 "%s"'
 alias psqlg 'psql gcb'
 alias psql 'pgcli'
 
-alias tks 'pushd ~/code/dev/tks; perl tks.pl ~/code/dev/tks/timesheets/(date "+%Y-%m")-catalyst.tks -f month'
-alias tksedit 'vim -O ~/code/dev/tks/timesheets/(date "+%Y-%m")-catalyst.tks ~/.tksrc'
-alias tksmake 'set -l FNAME ~/code/dev/tks/timesheets/(date "+%Y-%m")-catalyst.tks; tks -t month >> $FNAME; echo "Saved to $FNAME"; popd;'
-
-alias decrypt_password '/home/aaronb/code/personal/dotfiles/decrypt_password.sh'
-
 alias b '/bin/bash'
 
 function sudo
