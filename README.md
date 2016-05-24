@@ -2,7 +2,6 @@ Installation
 ============
 
 Run
-
-    ./install
+    ./install.sh
 
 to complete installation
