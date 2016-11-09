@@ -9,26 +9,26 @@ git submodule update --init --recursive
 
 echo "Install fish config..."
 mkdir -p ~/.config/fish
-rm ~/.config/fish/config.fish
-rm ~/.config/fish/custom
+rm -f ~/.config/fish/config.fish
+rm -f ~/.config/fish/custom
 ln -s $SOURCE/fish/config.fish ~/.config/fish/config.fish
 ln -s $SOURCE/fish/custom ~/.config/fish/custom
 
 echo "Install qtile config..."
-rm ~/.config/qtile
+rm -f ~/.config/qtile
 ln -s $SOURCE/qtile ~/.config/qtile
 
 echo "Install git config..."
-rm ~/.gitconfig
+rm -f ~/.gitconfig
 ln -s $SOURCE/.gitconfig ~/.gitconfig
 
 echo "Install vim config..."
-rm ~/.vim
+rm -f ~/.vim
 ln -s $SOURCE/.vim ~/.vim
 
 echo "Install X config..."
-rm ~/.xinitrc
-rm ~/.Xmodmap
+rm -f ~/.xinitrc
+rm -f ~/.Xmodmap
 ln -s $SOURCE/.xinitrc ~/.xinitrc
 ln -s $SOURCE/.Xmodmap ~/.Xmodmap
 
