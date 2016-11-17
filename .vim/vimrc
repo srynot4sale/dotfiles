@@ -12,7 +12,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
-Bundle 'rust-lang/rust.vim'
 " Let Vundle manage Vundle
 
 
