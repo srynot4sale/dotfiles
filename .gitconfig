@@ -7,10 +7,14 @@
 
 [user]
     name = Aaron Barnes
-    email = aaron@io.nz
+    email = abarnes@8i.com
 
 [alias]
     cdiff = diff --cached
+    wdiff = diff --word-diff
+    wwdiff = diff --word-diff-regex=.
+    cwdiff = diff --cached --word-diff
+    cwwdiff = diff --cached --word-diff-regex=.
     co = checkout
     cp = cherry-pick
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
