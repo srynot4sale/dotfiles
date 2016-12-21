@@ -32,6 +32,11 @@ rm -f ~/.Xmodmap
 ln -s $SOURCE/.xinitrc ~/.xinitrc
 ln -s $SOURCE/.Xmodmap ~/.Xmodmap
 
+echo "Install fzf"
+rm -rf ~/.fzf
+ln -s $SOURCE/fzf ~/.fzf
+~/.fzf/install
+
 echo "Install new apt sources..."
 echo " - fish PPA"
 
