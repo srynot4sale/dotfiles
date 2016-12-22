@@ -10,9 +10,11 @@ git submodule update --init --recursive
 echo "Install fish config..."
 mkdir -p ~/.config/fish
 rm -f ~/.config/fish/config.fish
-rm -f ~/.config/fish/custom
-ln -s $SOURCE/fish/config.fish ~/.config/fish/config.fish
-ln -s $SOURCE/fish/custom ~/.config/fish/custom
+
+for file in $SOURCE/fish/functions/*
+do
+    ln -s $file ~/.config/fish/functions/
+done
 
 echo "Install qtile config..."
 rm -f ~/.config/qtile
