@@ -7,7 +7,7 @@
 
 [user]
     name = Aaron Barnes
-    email = abarnes@8i.com
+    email = aaron@io.nz
 
 [alias]
     cdiff = diff --cached
