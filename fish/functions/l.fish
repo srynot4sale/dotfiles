@@ -1,3 +1,3 @@
 function l
-    ls --color=auto -alv $argv
+    ls --color=auto -al --group-directories-first $argv
 end
