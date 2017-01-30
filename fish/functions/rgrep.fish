@@ -1,3 +1,3 @@
 function rgrep
-    grep --color=auto -RniP $argv
+    ack -i $argv
 end
