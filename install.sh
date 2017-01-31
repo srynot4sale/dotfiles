@@ -52,7 +52,7 @@ else
 fi
 
 echo "Install/update apt packages..."
-sudo apt-get install -y fish vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep
+sudo apt-get install -y fish vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3
 
 echo "Install/update fisherman and fish theme..."
 if [ ! -d ~/.local/share/fisherman ]; then
