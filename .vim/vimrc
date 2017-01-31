@@ -11,8 +11,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
-" Let Vundle manage Vundle
+Bundle 'vim-syntastic/syntastic'
+Bundle 'fholgado/minibufexpl.vim'
+
 
 
 """""" GUI stuff
