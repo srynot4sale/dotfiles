@@ -65,5 +65,8 @@ fish -l -c "fisher install omf/theme-bobthefish"
 echo "Install vim plugins..."
 vim +PluginInstall +qall
 
+echo "Install YouCompleteMe..."
+~/.vim/bundle/YouCompleteMe/install.sh
+
 echo "Install pip packages..."
 sudo pip install --upgrade pgcli

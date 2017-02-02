@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 
 
