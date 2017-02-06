@@ -138,6 +138,8 @@ map <down> <ESC>;bn<RETURN>
 map <up> <ESC>;bp<RETURN>
 map <left> <ESC><C-W><left>
 map <right> <ESC><C-W><right>
+" YCM go to definition
+nnoremap <leader>l :YcmCompleter GoToDefinition<CR>
 
 
 """""" Terminal stuff
