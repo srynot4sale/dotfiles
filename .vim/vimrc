@@ -15,6 +15,16 @@ Bundle 'vim-syntastic/syntastic'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'Valloric/YouCompleteMe'
 
+let g:syntastic_python_python_exec = 'python'
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--ignore E501,E127,E126'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+let g:ycm_python_binary_path = 'python'
 
 
 """""" GUI stuff
@@ -92,6 +102,11 @@ set statusline+=%{&encoding}, " encoding
 set statusline+=%{&fileformat}] " file format
 set statusline+=\ CWD:%r%{getcwd()}%h
 set statusline+=\ Line:%l/%L
+
+" Syntastic status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 
 """""" PHP stuff
