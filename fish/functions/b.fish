@@ -1,3 +1,3 @@
 function b
-    /bin/bash $argv
+    /bin/bash -c "$argv"
 end
