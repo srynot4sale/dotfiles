@@ -28,6 +28,10 @@ echo "Install vim config..."
 rm -f ~/.vim
 ln -s $SOURCE/.vim ~/.vim
 
+echo "Install ack config..."
+rm -f ~/.ackrc
+ln -s $SOURCE/.ackrc ~/.ackrc
+
 echo "Install X config..."
 rm -f ~/.xinitrc
 rm -f ~/.Xmodmap
