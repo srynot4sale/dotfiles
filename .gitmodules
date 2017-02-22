@@ -7,3 +7,6 @@
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".conky/seamod"]
+	path = .conky/seamod
+	url = https://github.com/maxiwell/conky-seamod

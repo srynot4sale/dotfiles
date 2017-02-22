@@ -13,6 +13,7 @@ rm -f ~/.config/fish/config.fish
 
 for file in $SOURCE/fish/functions/*
 do
+    rm -f ~/.config/fish/functions/$(basename $file)
     ln -s $file ~/.config/fish/functions/
 done
 
