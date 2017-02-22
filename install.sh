@@ -73,4 +73,4 @@ echo "Install YouCompleteMe..."
 ~/.vim/bundle/YouCompleteMe/install.sh
 
 echo "Install pip packages..."
-sudo pip install --upgrade pgcli
+sudo pip install --upgrade pgcli ipython
