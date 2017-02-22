@@ -17,7 +17,9 @@
     cwwdiff = diff --cached --word-diff-regex=.
     co = checkout
     cp = cherry-pick
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --topo-order
+    llol = log --decorate --pretty=oneline --abbrev-commit --topo-order
+    llog = log --no-merges --decorate --topo-order
     track = checkout --track
     ll = log -n1
     cmt = commit -v
