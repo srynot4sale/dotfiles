@@ -6,14 +6,12 @@ set nobackup                    " Don't create backup files
 set wildmode=longest,list       " Tab-completion link bash
 
 
-"""""" Vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'vim-syntastic/syntastic'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Valloric/YouCompleteMe'
+"""""" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'vim-syntastic/syntastic'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'Valloric/YouCompleteMe'
+call plug#end()
 
 let g:syntastic_python_python_exec = 'python'
 let g:syntastic_python_checkers = ['flake8']

@@ -67,8 +67,12 @@ fi
 fish -l -c "fisher update"
 fish -l -c "fisher install omf/theme-bobthefish"
 
+echo "Install vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "Install vim plugins..."
-vim +PluginInstall +qall
+vim +PlugUpdate +q
 
 echo "Install YouCompleteMe..."
 ~/.vim/bundle/YouCompleteMe/install.sh
