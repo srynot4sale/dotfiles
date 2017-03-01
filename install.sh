@@ -42,7 +42,7 @@ ln -s $SOURCE/.Xmodmap ~/.Xmodmap
 echo "Install fzf"
 rm -rf ~/.fzf
 ln -s $SOURCE/fzf ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 echo "Install new apt sources..."
 echo " - fish PPA"
