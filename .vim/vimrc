@@ -10,7 +10,7 @@ set wildmode=longest,list       " Tab-completion link bash
 call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
 Plug 'fholgado/minibufexpl.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 let g:syntastic_python_python_exec = 'python'
