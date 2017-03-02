@@ -72,10 +72,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Install vim plugins..."
-vim +PlugUpdate +q
-
-echo "Install YouCompleteMe..."
-~/.vim/bundle/YouCompleteMe/install.sh
+vim +PlugUpdate +qall
 
 echo "Install pip packages..."
 sudo pip install --upgrade pgcli ipython
