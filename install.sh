@@ -80,4 +80,4 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages..."
-sudo pip install --upgrade pgcli ipython
+sudo pip install --upgrade pgcli ipython git-goggles termcolor
