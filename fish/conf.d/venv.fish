@@ -13,6 +13,9 @@ function activate_venv --on-variable PWD
                 end
             end
 
+            # Prevent activate.fish prepending ugly stuff to prompt
+            set VIRTUAL_ENV_DISABLE_PROMPT 1
+
             set -l AB_ACTIVATE "$NEW_VENV/bin/activate.fish"
             if test -f $AB_ACTIVATE
                 echo "Activating virtual environment at '$AB_PY_VERSION'"
