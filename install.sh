@@ -10,6 +10,9 @@ mkdir -p ~/.go/bin
 echo "Install git submodules..."
 git submodule update --init --recursive
 
+echo "Making ~/code dirs"
+mkdir -p ~/code/go/bin
+
 echo "Install fish config..."
 mkdir -p ~/.config/fish/function
 mkdir -p ~/.config/fish/conf.d
