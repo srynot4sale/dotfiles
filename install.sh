@@ -14,7 +14,7 @@ echo "Making ~/code dirs"
 mkdir -p ~/code/go/bin
 
 echo "Install fish config..."
-mkdir -p ~/.config/fish/function
+mkdir -p ~/.config/fish/functions
 mkdir -p ~/.config/fish/conf.d
 
 for file in $SOURCE/fish/functions/*
