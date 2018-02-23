@@ -14,7 +14,7 @@ lock_command = "dm-tool switch-to-greeter"
 keys = [
     # application shortcuts
     Key([modkey], "p", lazy.spawncmd()),
-    Key([modkey, "shift"], "Return", lazy.spawn("terminator")),
+    Key([modkey, "shift"], "Return", lazy.spawn("gnome-terminal")),
 
     # audio shortcuts
     Key([modkey], "Home", lazy.spawn("/usr/bin/pulseaudio-ctl mute")),
