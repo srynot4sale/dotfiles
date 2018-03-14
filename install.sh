@@ -96,4 +96,4 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages..."
-sudo -H pip install --upgrade pgcli ipython git-goggles termcolor
+sudo -H pip install --upgrade pgcli ipython git-goggles termcolor glances
