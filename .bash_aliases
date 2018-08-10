@@ -4,7 +4,6 @@ alias ls='ls --color=auto'
 alias l='ls --color=auto -alv'
 alias rgrep='grep --color=auto -RniP'
 alias v='vim'
-alias top='atop'
 alias mv='mv -i'
 
 # Git stuff
@@ -25,7 +24,3 @@ alias psqlg='psql $(gcb)'
 
 # Generate random pwd
 alias pwdgen='gpg --gen-random --armor 1 9'
-
-cws() {
-    pushd /home/aaronb/code/www/moodle/$1/htdocs
-}
