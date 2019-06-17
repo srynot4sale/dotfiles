@@ -150,8 +150,6 @@ cabbrev bP bp
 cabbrev Qall qall
 " Disable Shift Enter due to fat fingers
 map <S-CR> <Nop>
-" Disable case shift
-map ` <Nop>
 
 
 """""" Keyboard remapping
