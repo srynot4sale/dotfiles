@@ -1,9 +1,0 @@
-[submodule "powerline-fonts"]
-	path = powerline-fonts
-	url = https://github.com/powerline/fonts.git
-[submodule "fzf"]
-	path = fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule ".conky/seamod"]
-	path = .conky/seamod
-	url = https://github.com/maxiwell/conky-seamod
