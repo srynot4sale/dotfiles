@@ -22,7 +22,7 @@ function maxlength_pwd {
 
 function whoami_if_other {
     user=`whoami`
-    if [ "$user" != "aaronb" ]
+    if [ "$user" != "abarnes" ]
     then
         echo "($user)"
     fi
