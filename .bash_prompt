@@ -2,6 +2,12 @@
 
 if [ -f /usr/share/git/git-prompt.sh ]; then
     . /usr/share/git/git-prompt.sh
+elif [ -f ~/code/dotfiles/git-prompt.sh ]; then
+    . ~/code/dotfiles/git-prompt.sh
+else
+    function __git_ps1 {
+        return
+    }
 fi
 
 # Code taken from https://wiki.archlinux.org/index.php/Color_Bash_Prompt
