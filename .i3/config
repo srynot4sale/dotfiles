@@ -1,0 +1,7 @@
+set $mod Mod4
+
+# start my terminal of choice
+bindsym $mod+Return exec terminator
+
+# lock
+bindsym $mod+L exec i3lock

@@ -21,6 +21,10 @@ echo "Install vim config..."
 rm -f ~/.vim
 ln -s $SOURCE/.vim ~/.vim
 
+echo "Install i3 config..."
+rm -f ~/.i3
+ln -s $SOURCE/.i3 ~/.i3
+
 echo "Install ack config..."
 rm -f ~/.ackrc
 ln -s $SOURCE/.ackrc ~/.ackrc
