@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 xrdb -merge ~/.Xresources &
+xmodmap ~/.Xmodmap
 
 /usr/bin/xscreensaver -no-splash &
 
