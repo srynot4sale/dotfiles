@@ -3,6 +3,4 @@
 /.vim/autoload
 /qtile/config.pyc
 /qtile/__pycache__
-/fish/fishd.*
-/fish/fish_history
 /git-prompt.sh

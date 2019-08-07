@@ -13,22 +13,6 @@ git submodule update --init --recursive
 echo "Making ~/code dirs"
 mkdir -p ~/code/go/bin
 
-echo "Install fish config..."
-mkdir -p ~/.config/fish/functions
-mkdir -p ~/.config/fish/conf.d
-
-for file in $SOURCE/fish/functions/*
-do
-    rm -f ~/.config/fish/functions/$(basename $file)
-    ln -s $file ~/.config/fish/functions/
-done
-
-for file in $SOURCE/fish/conf.d/*
-do
-    rm -f ~/.config/fish/conf.d/$(basename $file)
-    ln -s $file ~/.config/fish/conf.d/
-done
-
 echo "Install qtile config..."
 rm -f ~/.config/qtile
 ln -s $SOURCE/qtile ~/.config/qtile
@@ -59,29 +43,8 @@ ln -s $SOURCE/fzf ~/.fzf
 echo "Install powerline fonts..."
 powerline-fonts/install.sh
 
-echo "Install new apt sources..."
-echo " - fish PPA"
-
-fish_ppa="fish-shell/release-2"
-
-if ! grep -q "$fish_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-    sudo add-apt-repository -y ppa:${fish_ppa}
-    sudo apt-get update
-else
-    echo "Already installed..."
-fi
-
 echo "Install/update apt packages..."
-sudo apt-get install -y curl wget fish vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3 shellcheck
-
-echo "Install/update fisherman and fish theme..."
-if [ ! -d ~/.local/share/fisherman ]; then
-    fish -c "curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman" || true
-fi
-
-fish -l -c "fisher update"
-fish -l -c "fisher install omf/theme-bobthefish"
-
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3 shellcheck
 
 echo "Install pip"
 rm -f get-pip.py
