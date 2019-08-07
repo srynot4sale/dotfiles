@@ -1,6 +1,4 @@
 /.vim/.netrwhist
 /.vim/plugged
 /.vim/autoload
-/qtile/config.pyc
-/qtile/__pycache__
 /git-prompt.sh

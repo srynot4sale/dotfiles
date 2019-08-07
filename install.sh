@@ -13,10 +13,6 @@ git submodule update --init --recursive
 echo "Making ~/code dirs"
 mkdir -p ~/code/go/bin
 
-echo "Install qtile config..."
-rm -f ~/.config/qtile
-ln -s $SOURCE/qtile ~/.config/qtile
-
 echo "Install git config..."
 rm -f ~/.gitconfig
 ln -s $SOURCE/.gitconfig ~/.gitconfig

@@ -10,5 +10,3 @@ export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 export GNOME-KEYRING-SOCKET
 export GNOME-KEYRING-PID
-
-exec qtile
