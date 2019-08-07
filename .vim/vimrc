@@ -110,6 +110,11 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 
+"""""" Special case stuff
+au BufNewFile,BufRead wscript set filetype=python
+
+
+
 """""" Fix typos
 cabbrev Wq wq
 cabbrev WQ wq
