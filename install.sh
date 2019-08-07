@@ -44,7 +44,7 @@ echo "Install powerline fonts..."
 powerline-fonts/install.sh
 
 echo "Install/update apt packages..."
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3 shellcheck
+sudo apt-get install -y curl i3 wget vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3 shellcheck
 
 echo "Install pip"
 rm -f get-pip.py
