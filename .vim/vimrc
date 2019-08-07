@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'vimwiki/vimwiki'
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 call plug#end()
@@ -121,15 +120,6 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 
 " consider *.js.php as JS files
 au BufNewFile,BufRead *.js.php set filetype=javascript
-
-
-"""""" vimiwki stuff
-au FileType vimwiki colorscheme solarized
-au FileType vimwiki set background=dark
-au FileType vimwiki hi CursorLine ctermbg=NONE guibg=NONE
-au FileType vimwiki hi CursorLine ctermbg=NONE guibg=NONE
-au FileType vimwiki let g:solarized_termcolors=256
-au FileType vimwiki let g:vimwiki_url_maxsave=0
 
 
 """""" Fix typos
