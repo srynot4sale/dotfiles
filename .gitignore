@@ -2,3 +2,4 @@
 /.vim/plugged
 /.vim/autoload
 /git-prompt.sh
+/.zsh/antigen.zsh
