@@ -62,7 +62,7 @@ rm -f get-pip.py
 echo "Install antigen for zsh"
 rm -f "$SOURCE/.zsh/antigen.zsh"
 mkdir -p "$SOURCE/.zsh"
-curl -L https://git.io/antigen > "$SOURCE/.zsh/antigen.zsh"
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > "$SOURCE/.zsh/antigen.zsh"
 
 echo "Install vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
