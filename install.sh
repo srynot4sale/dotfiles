@@ -41,11 +41,6 @@ rm -f ~/.Xmodmap
 ln -s "$SOURCE/.xinitrc" ~/.xinitrc
 ln -s "$SOURCE/.Xmodmap" ~/.Xmodmap
 
-echo "Install fzf..."
-rm -rf ~/.fzf
-ln -s "$SOURCE/fzf" ~/.fzf
-~/.fzf/install --all
-
 echo "Install/update apt packages..."
 sudo apt-get install -y curl i3 wget vim postgresql-common libpq-dev silversearcher-ag python-dev ack-grep vim-gtk3 shellcheck zsh jq fonts-powerline fzf tree
 
