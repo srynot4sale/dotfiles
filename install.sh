@@ -46,12 +46,12 @@ sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher
 
 echo "Install fzf"
 . /etc/lsb-release
-if [[ "$DISTRIB_RELEASE" == "16.04" ]]; then
+if [[ "$DISTRIB_RELEASE" != "19.04" ]]; then
+    sudo apt-get install -y fzf
+else
     rm -rf ~/.fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
-else
-    sudo apt-get install -y fzf
 fi
 
 echo "Install pip"
