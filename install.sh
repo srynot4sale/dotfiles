@@ -46,7 +46,7 @@ sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher
 
 echo "Install fzf"
 . /etc/lsb-release
-if [[ "$DISTRIB_RELEASE" != "19.04" ]]; then
+if [[ "$DISTRIB_RELEASE" == "19.04" ]]; then
     sudo apt-get install -y fzf
 else
     rm -rf ~/.fzf
