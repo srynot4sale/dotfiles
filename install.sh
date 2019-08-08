@@ -15,36 +15,39 @@ mkdir -p ~/code/go/bin
 
 echo "Install git config..."
 rm -f ~/.gitconfig
-ln -s $SOURCE/.gitconfig ~/.gitconfig
+ln -s "$SOURCE/.gitconfig" ~/.gitconfig
+
+echo "Install zsh config..."
+rm -f ~/.zshrc
+rm -f ~/.zsh
+ln -s "$SOURCE/.zshrc" ~/.zshrc
+ln -s "$SOURCE/.zsh" ~/.zsh
 
 echo "Install vim config..."
 rm -f ~/.vim
-ln -s $SOURCE/.vim ~/.vim
+ln -s "$SOURCE/.vim" ~/.vim
 
 echo "Install i3 config..."
 rm -f ~/.i3
-ln -s $SOURCE/.i3 ~/.i3
+ln -s "$SOURCE/.i3" ~/.i3
 
 echo "Install ack config..."
 rm -f ~/.ackrc
-ln -s $SOURCE/.ackrc ~/.ackrc
+ln -s "$SOURCE/.ackrc" ~/.ackrc
 
 echo "Install X config..."
 rm -f ~/.xinitrc
 rm -f ~/.Xmodmap
-ln -s $SOURCE/.xinitrc ~/.xinitrc
-ln -s $SOURCE/.Xmodmap ~/.Xmodmap
+ln -s "$SOURCE/.xinitrc" ~/.xinitrc
+ln -s "$SOURCE/.Xmodmap" ~/.Xmodmap
 
 echo "Install fzf..."
 rm -rf ~/.fzf
-ln -s $SOURCE/fzf ~/.fzf
+ln -s "$SOURCE/fzf" ~/.fzf
 ~/.fzf/install --all
 
-echo "Install powerline fonts..."
-powerline-fonts/install.sh
-
 echo "Install/update apt packages..."
-sudo apt-get install -y curl i3 wget vim postgresql-common libpq-dev silversearcher-ag python-dev gnome-control-center gnome-online-accounts ack-grep vim-gtk3 shellcheck
+sudo apt-get install -y curl i3 wget vim postgresql-common libpq-dev silversearcher-ag python-dev ack-grep vim-gtk3 shellcheck zsh jq fonts-powerline fzf tree
 
 echo "Install pip"
 rm -f get-pip.py
@@ -59,4 +62,4 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages..."
-sudo -H pip install --upgrade pgcli ipython git-goggles termcolor glances
+sudo -H pip install --upgrade pip pgcli ipython git-goggles termcolor glances docker-compose
