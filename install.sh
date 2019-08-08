@@ -60,8 +60,9 @@ wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py && sudo python 
 rm -f get-pip.py
 
 echo "Install antigen for zsh"
-rm -f ~/.zsh/antigen.zsh
-curl -L git.io/antigen > ~/.zsh/antigen.zsh
+rm -f "$SOURCE/.zsh/antigen.zsh"
+mkdir -p "$SOURCE/.zsh"
+curl -L https://git.io/antigen > "$SOURCE/.zsh/antigen.zsh"
 
 echo "Install vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
