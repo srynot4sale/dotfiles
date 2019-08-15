@@ -72,4 +72,4 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages..."
-sudo -H pip install --upgrade pip pgcli ipython git-goggles termcolor glances docker-compose
+sudo -H pip install --upgrade pip pgcli ipython git-goggles termcolor glances docker-compose pipenv
