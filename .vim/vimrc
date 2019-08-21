@@ -13,6 +13,7 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 let g:syntastic_python_python_exec = 'python'
