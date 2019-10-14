@@ -39,3 +39,6 @@
 
 [merge]
     renamelimit = 100000
+
+[diff]
+    noprefix = True
