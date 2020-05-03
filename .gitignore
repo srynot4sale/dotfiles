@@ -1,5 +1,6 @@
-/.vim/.netrwhist
-/.vim/plugged
-/.vim/autoload
+/vim/.vim/.netrwhist
+/vim/.vim/plugged
+/vim/.vim/autoload
 /git-prompt.sh
-/.zsh/antigen.zsh
+/zsh/.zsh/antigen.zsh
+/icons

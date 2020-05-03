@@ -112,7 +112,7 @@ bindkey "^[[1;3C" forward-word
 
 
 # FZF config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # Wrap SSH with a different colour background
