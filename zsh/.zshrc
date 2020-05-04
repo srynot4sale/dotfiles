@@ -46,10 +46,11 @@ ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 
 local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
+local bg_jobs="%(1j.BG:%{$fg[red]%}%j%{$reset_color%}.)"
 
 # Prompt format:
 #
-# PRIVILEGES USER@MACHINE in DIRECTORY on git:BRANCH STATE [TIME] C:LAST_EXIT_CODE
+# PRIVILEGES USER@MACHINE in DIRECTORY on git:BRANCH STATE [TIME] BG:NO_BG_JOBS C:LAST_EXIT_CODE
 # $ COMMAND
 #
 # For example:
@@ -64,7 +65,7 @@ PROMPT="
 %{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
 ${git_info}\
  \
-%{$fg[white]%}[%*] $exit_code
+%{$fg[white]%}[%*] $bg_jobs $exit_code
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 
 function +vi-git-untracked() {
