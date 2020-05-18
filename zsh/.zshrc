@@ -125,7 +125,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 ########################################################################
 ## PATH
-export PATH="${HOME}/code/dotfiles/bin:${PATH}"
+export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}"
 
 ########################################################################
 # ALIASES

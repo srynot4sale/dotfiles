@@ -48,8 +48,9 @@ else
 fi
 
 # X stuff
-if [[ "1" == "0" ]]; then
+if [[ $(xset q &>/dev/null) ]]; then
     sudo apt-get install fonts-powerline fonts-inconsolata
+
     echo "Install Tela-icon-theme..."
     if [[ -f "$SOURCE/icons/.git/config" ]]; then
         cd "$SOURCE/icons"
@@ -68,7 +69,9 @@ fi
 
 echo "Install pip"
 rm -f get-pip.py
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo python3 get-pip.py
 rm -f get-pip.py
 
 echo "Install antigen for zsh"
@@ -81,12 +84,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
-echo "Upgrade pip..."
-sudo -H pip install --upgrade pip
-
 echo "Install pip packages as user..."
-pip install --upgrade pgcli ipython git-goggles termcolor glances pipenv
+pip3 install --upgrade pgcli ipython git-goggles termcolor glances pipenv
 
 echo "Install pip packages as root..."
-sudo -H pip install --upgrade docker-compose
-
+sudo -H pip3 install --upgrade docker-compose
