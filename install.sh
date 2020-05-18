@@ -48,7 +48,7 @@ else
 fi
 
 # X stuff
-if [[ $(xset q &>/dev/null) ]]; then
+if xset q &>/dev/null; then
     sudo apt-get install fonts-powerline fonts-inconsolata
 
     echo "Install Tela-icon-theme..."
