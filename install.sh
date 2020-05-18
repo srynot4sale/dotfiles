@@ -49,7 +49,7 @@ fi
 
 # X stuff
 if xset q &>/dev/null; then
-    sudo apt-get install fonts-powerline fonts-inconsolata
+    sudo apt-get install fonts-powerline fonts-inconsolata gnome-tweaks
 
     echo "Install Tela-icon-theme..."
     if [[ -f "$SOURCE/icons/.git/config" ]]; then
