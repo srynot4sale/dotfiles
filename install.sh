@@ -89,3 +89,16 @@ pip3 install --upgrade pgcli ipython git-goggles termcolor glances pipenv
 
 echo "Install pip packages as root..."
 sudo -H pip3 install --upgrade docker-compose
+
+echo "Install Firefox userChrome..."
+PROFILEINI="${HOME}/.mozilla/firefox/profiles.ini"
+if [[ -f "$PROFILEINI" ]]; then
+    PROFILEDIR=$(awk -F'=' '/^\[Install.*/{ f=1; next }; /^\[.*/{f = 0; next }; f && $1=="Default"{ print $2 }' "$PROFILEINI")
+    PROFILEDIR="${HOME}/.mozilla/firefox/${PROFILEDIR}"
+
+    if [[ -d "$PROFILEDIR" ]]; then
+        echo "Found profile at ${PROFILEDIR} and stowing config..."
+        mkdir -p "${PROFILEDIR}/chrome"
+        stow --target "${PROFILEDIR}/chrome" -R mozilla
+    fi
+fi
