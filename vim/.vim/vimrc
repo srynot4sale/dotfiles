@@ -115,7 +115,8 @@ set statusline+=%*
 
 """""" Special case stuff
 au BufNewFile,BufRead wscript set filetype=python
-
+autocmd FileType tf setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
 
 """""" Fix typos
