@@ -14,6 +14,8 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mhinz/vim-signify'
 call plug#end()
 
