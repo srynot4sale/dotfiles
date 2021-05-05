@@ -1,3 +1,4 @@
 --ignore-dir=.cache
 --ignore-dir=.venv
 --ignore-dir=vir_env
+--ignore-case
