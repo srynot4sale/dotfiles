@@ -45,3 +45,9 @@
 
 [diff]
     noprefix = True
+
+[tag]
+    sort = version:refname
+
+[pager]
+    branch = false
