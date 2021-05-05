@@ -37,7 +37,7 @@
     default = tracking
 
 [core]
-    pager = less -r
+    pager = delta
     editor = vim
 
 [merge]
@@ -51,3 +51,11 @@
 
 [pager]
     branch = false
+
+[delta]
+    syntax-theme = Coldark-Dark
+    navigate = true
+    line-numbers = true
+
+[interactive]
+    diffFilter = delta --color-only
