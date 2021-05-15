@@ -123,6 +123,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #    echo -ne '\e]11;#000000\a'
 #}
 
+# Prevent pasting performance dying due to highlighting
+zle_highlight+=(paste:none)
+
 ########################################################################
 ## PATH
 export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}"
