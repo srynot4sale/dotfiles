@@ -130,3 +130,5 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}"
 ########################################################################
 # ALIASES
 alias psql=pgcli
+alias ack=ag
+alias cat=batcat
