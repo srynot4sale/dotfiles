@@ -10,32 +10,49 @@ set encoding=utf-8
 """""" vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
-Plug 'fholgado/minibufexpl.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdcommenter'
+Plug 'morhetz/gruvbox'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'elzr/vim-json'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
-let g:syntastic_python_python_exec = 'python'
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore E501,E127,E126'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_sh_shellcheck_args = '-x'  " allow shellcheck to test source'd files
 
+let g:ycm_python_binary_path = 'python3'
+let g:ycm_confirm_extra_conf = 0
 
-let g:ycm_python_binary_path = 'python'
+let g:gitgutter_sign_allow_clobber = 1
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
+
+let g:vim_json_syntax_conceal = 0
+
+let g:airline#extensions#tabline#enabled = 1
 
 
 """""" GUI stuff
 if &t_Co >= 256 || has("gui_running")
     set background=dark
-    colorscheme mustang          " If gvim, or terminal has 256+ colors
+    " If gvim, or terminal has 256+ colors
+    autocmd vimenter * ++nested colorscheme gruvbox
 endif
 
 if has("gui_running")
@@ -43,13 +60,15 @@ if has("gui_running")
     set gfn=DejaVu\ Sans\ Mono\ 9
 endif
 
+
 au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
 
 
 """""" Syntax stuff
 syntax enable
 set showmatch                   " Show matching parenthesis
-set nu                          " Show line numbers
+set number                      " Show line numbers
+set signcolumn=yes              " Always show sign gutter
 
 
 """""" Search
@@ -110,9 +129,9 @@ set statusline+=\ CWD:%r%{getcwd()}%h
 set statusline+=\ Line:%l/%L
 
 " Syntastic status line
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 
 """""" Special case stuff
@@ -153,18 +172,30 @@ map <left> <ESC><C-W><left>
 map <right> <ESC><C-W><right>
 " YCM go to definition
 nnoremap <leader>l :YcmCompleter GoToDefinition<CR>
+nmap <leader>D <plug>(YCMHover)
 
 
 """""" Terminal stuff
 set title                       " Change terminal's title
 set visualbell                  " No bell
 set noerrorbells                " No bell
+set updatetime=100
 
 
 """""" Scroll with context
 set scrolloff=10
 set sidescrolloff=10
 
+
+" Long undo and command history
+set undolevels=1000
+set history=200
+
+" Save undo history permanently
+if has('persistent_undo')
+    set undodir=~/.vimundo
+    set undofile
+endif
 
 """"""""""""""""""""""""""""""""""
 " autoreloading of vim config when saving it
