@@ -87,7 +87,7 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages as user..."
-pip3 install --upgrade pgcli ipython git-goggles termcolor glances pipenv docker-compose
+pip3 install --upgrade pgcli ipython termcolor glances pipenv docker-compose
 
 echo "Install delta for git"
 curl -L -o "/tmp/git-delta.deb" "https://github.com/dandavison/delta/releases/download/0.7.1/git-delta_0.7.1_amd64.deb"
