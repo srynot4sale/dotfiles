@@ -112,6 +112,7 @@ set listchars=extends:#         " Display a # at the end of wrapping lines
 " Highlight the line the cursor is on in the current window only
 au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
 au WinLeave * setlocal nocursorline
+au InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
 """""" Fancy statusbar (from http://gist.github.com/187825)
