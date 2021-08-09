@@ -170,4 +170,4 @@ endif
 """"""""""""""""""""""""""""""""""
 " autoreloading of vim config when saving it
 autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! bufwritepost .vimrc source ~/.vim/vimrc
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
