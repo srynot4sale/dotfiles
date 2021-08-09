@@ -170,3 +170,8 @@ bindsym $mod+l exec i3lock
 bar {
         status_command i3status
 }
+
+# Handle notifications better
+for_window[window_type="notification"] floating enable
+
+bindsym $mod+x move workspace to output right
