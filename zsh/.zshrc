@@ -1,26 +1,11 @@
+# Antigen
 source ~/.zsh/antigen.zsh
+antigen init ~/.zsh/.antigenrc
 
-#########################################################################
-# If antigen is installed, do antigen things
-if type "antigen" > /dev/null;
-then
-    # Bundles
-    # Compat shim
-    antigen use oh-my-zsh
-    # Bundles from omz repo
-    antigen bundle command-not-found
-    antigen bundle zsh-users/zsh-syntax-highlighting
-    antigen bundle zsh-users/zsh-autosuggestions
-
-
-    # Theme
-    export LANGUAGE="en"
-    export LC_CTYPE="en_NZ.UTF-8"
-    export LANG="en_NZ.UTF-8"
-
-    antigen apply
-fi
-
+# Theme
+export LANGUAGE="en"
+export LC_CTYPE="en_NZ.UTF-8"
+export LANG="en_NZ.UTF-8"
 
 # Theme config (modified from YS theme)
 

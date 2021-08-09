@@ -1,0 +1,10 @@
+# Bundles
+# Compat shim
+antigen use oh-my-zsh
+
+# Bundles from omz repo
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
