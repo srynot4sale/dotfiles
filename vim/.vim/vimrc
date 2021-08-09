@@ -10,7 +10,6 @@ set encoding=utf-8
 """""" vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-syntastic/syntastic'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -31,9 +30,6 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_sh_shellcheck_args = '-x'  " allow shellcheck to test source'd files
-
-let g:ycm_python_binary_path = 'python3'
-let g:ycm_confirm_extra_conf = 0
 
 let g:gitgutter_sign_allow_clobber = 1
 
