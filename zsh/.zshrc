@@ -135,3 +135,7 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}"
 alias psql=pgcli
 alias ack=ag
 alias cat=batcat
+
+########################################################################
+# Grab local zsh
+[ -f ~/code/dotfiles/.zshrc_local ] && source ~/code/dotfiles/.zshrc_local
