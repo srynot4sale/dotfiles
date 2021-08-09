@@ -46,17 +46,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 """""" GUI stuff
-if &t_Co >= 256 || has("gui_running")
-    set background=dark
-    " If gvim, or terminal has 256+ colors
-    autocmd vimenter * ++nested colorscheme gruvbox
-endif
-
-if has("gui_running")
-    set guioptions-=T
-    set gfn=DejaVu\ Sans\ Mono\ 9
-endif
-
+set background=dark
+" If gvim, or terminal has 256+ colors
+autocmd vimenter * colorscheme gruvbox
 
 au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
 
