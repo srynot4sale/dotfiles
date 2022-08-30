@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+local selected_branch=$(git branches | fzf --ansi --tac | awk '{print $1}')
+if [ "$selected_branch" != '*' ]; then
+  git checkout $selected_branch
+fi
