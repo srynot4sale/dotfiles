@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+_num_stashes=$(git stash list | wc -l | while read l; do echo "$l - 1"; done | bc);
+echo -e "${PURPLE}# Stashes${COLOR_END}";
+for i in $(seq 0 ${_num_stashes});
+do
+    echo -en "${CYAN}stash@{${i}}:${GREEN}" && git show --format="%ad%Creset %s" stash@{$i} | head -n 1;
+done
