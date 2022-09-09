@@ -36,7 +36,7 @@ echo "Install X config..."
 stow --target "$HOME" -R x
 
 echo "Install/update apt packages..."
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python-dev python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip
 
 echo "Install fzf"
 . /etc/lsb-release
@@ -67,11 +67,6 @@ if xset q &>/dev/null; then
     cd "$SOURCE"
 fi
 
-echo "Install latest pip2"
-rm -f get-pip.py
-wget --no-check-certificate https://bootstrap.pypa.io/pip/2.7/get-pip.py
-sudo -H python get-pip.py
-rm -f get-pip.py
 
 echo "Upgrade pip3"
 sudo -H python3 -m pip install --upgrade pip
