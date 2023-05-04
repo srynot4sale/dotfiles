@@ -114,6 +114,9 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local
 alias psql=pgcli
 alias ack=ag
 alias cat=batcat
+alias awslogindev="aws-vault login fb-dev-assume"
+alias awsloginprod="aws-vault login fb-prod-assume"
+alias awstf="aws-vault exec root -- terraform"
 
 ########################################################################
 # Grab local zsh
