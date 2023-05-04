@@ -35,17 +35,11 @@ stow --target "$HOME" -R ack
 echo "Install X config..."
 stow --target "$HOME" -R x
 
-echo "Install/update apt packages..."
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip
+echo "Install aqua config..."
+stow --target "$HOME" -R aqua
 
-echo "Install fzf"
-. /etc/lsb-release
-if [[ "$DISTRIB_RELEASE" == "18.04" ]]; then
-    echo "Install fzf manually"
-    echo "git clone --depth 1 https://github.com/junegunn/fzf.git"
-else
-    sudo apt-get install -y fzf
-fi
+echo "Install/update apt packages..."
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf
 
 # X stuff
 if xset q &>/dev/null; then
@@ -84,9 +78,11 @@ vim +PlugUpdate +qall
 echo "Install pip packages as user..."
 pip3 install --upgrade pgcli ipython termcolor glances pipenv docker-compose
 
-echo "Install delta for git"
-curl -L -o "/tmp/git-delta.deb" "https://github.com/dandavison/delta/releases/download/0.7.1/git-delta_0.7.1_amd64.deb"
-sudo dpkg -i /tmp/git-delta.deb
+echo "Install Aqua..."
+curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash -s -- -i "$HOME/.local/bin/aqua"
+
+echo "Install misc binaries with aqua..."
+"$HOME/.local/bin/aqua" i
 
 echo "Install Firefox userChrome..."
 PROFILEINI="${HOME}/.mozilla/firefox/profiles.ini"
