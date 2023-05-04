@@ -107,7 +107,7 @@ zle_highlight+=(paste:none)
 
 ########################################################################
 ## PATH
-export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local/share/aquaproj-aqua/bin"
+export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local/share/aquaproj-aqua/bin:${HOME}/go/bin"
 
 ########################################################################
 # ALIASES
