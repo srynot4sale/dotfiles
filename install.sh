@@ -39,9 +39,16 @@ echo "Install aqua config..."
 stow --target "$HOME" -R aqua
 
 echo "Install/update apt packages..."
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat gnome-shell-extension-manager python3.10-venv ssh xclip
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat gnome-shell-extension-manager python3.10-venv ssh xclip flatpak
 
+echo "Install snap packages..."
 sudo snap install flameshot vlc
+
+echo "Setup flatpak..."
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo "Install flatpak packages..."
+flatpak install flathub re.sonny.Junction
 
 # X stuff
 if xset q &>/dev/null; then

@@ -24,7 +24,3 @@ Bluetooth Quick Connect - bjarosze
 Sound Output Device Chooser - kgshank
 Dash to Panel - jderose9
 TopHat - fflewddur
-
-
-# Others
-Install Junction via flatpaks (lets you pick which browser to open when you open a link)
