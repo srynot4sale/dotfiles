@@ -3,5 +3,6 @@
 /vim/.vim/autoload
 /git-prompt.sh
 /zsh/.zsh/antigen.zsh
+/zsh/.zsh/.antigenrc.zwc
 /icons
 /.zshrc_local
