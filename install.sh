@@ -39,7 +39,9 @@ echo "Install aqua config..."
 stow --target "$HOME" -R aqua
 
 echo "Install/update apt packages..."
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat gnome-shell-extension-manager python3.10-venv ssh xclip
+
+sudo snap install flameshot vlc
 
 # X stuff
 if xset q &>/dev/null; then
@@ -60,7 +62,6 @@ if xset q &>/dev/null; then
     ./install.sh ubuntu
     cd "$SOURCE"
 fi
-
 
 echo "Upgrade pip3"
 sudo -H python3 -m pip install --upgrade pip
