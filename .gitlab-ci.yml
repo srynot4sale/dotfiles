@@ -1,4 +1,6 @@
-deploy:
+mirror:
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   script:
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$PRIVATE_DEPLOY_KEY")
