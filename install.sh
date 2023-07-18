@@ -42,6 +42,7 @@ echo "Install dig config..."
 stow --target "$HOME" -R dig
 
 echo "Install/update apt packages..."
+sudo apt-get update
 sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat gnome-shell-extension-manager python3.10-venv ssh xclip flatpak
 
 echo "Install snap packages..."
@@ -52,6 +53,10 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 echo "Install flatpak packages..."
 flatpak install flathub re.sonny.Junction
+
+echo "Install papirus icon theme..."
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt-get update && sudo-get apt install papirus-icon-theme
 
 # X stuff
 if xset q &>/dev/null; then
