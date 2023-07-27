@@ -43,39 +43,29 @@ stow --target "$HOME" -R dig
 
 echo "Install/update apt packages..."
 sudo apt-get update
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat gnome-shell-extension-manager python3.10-venv ssh xclip flatpak
-
-echo "Install snap packages..."
-sudo snap install flameshot vlc
-
-echo "Setup flatpak..."
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-echo "Install flatpak packages..."
-flatpak install flathub re.sonny.Junction
-
-echo "Install papirus icon theme..."
-sudo add-apt-repository ppa:papirus/papirus
-sudo apt-get update && sudo-get apt install papirus-icon-theme
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat python3.10-venv ssh xclip
 
 # X stuff
 if xset q &>/dev/null; then
-    sudo apt-get install fonts-powerline fonts-inconsolata gnome-tweaks
+    echo "GUI specific stuff..."
 
-    echo "Install Tela-icon-theme..."
-    if [[ -f "$SOURCE/icons/.git/config" ]]; then
-        cd "$SOURCE/icons"
-        git reset --hard HEAD
-        git pull
-    else
-        git clone https://github.com/vinceliuice/Tela-icon-theme.git "$SOURCE/icons"
-        cd "$SOURCE/icons"
-    fi
+    echo "Add PPAs..."
+    # Doing them together saves multiple apt-get update calls
+    sudo add-apt-repository ppa:papirus/papirus -y
+    sudo add-apt-repository ppa:aslatter/ppa -y # alacritty
 
-    rm "$SOURCE/icons/links/scalable/apps/Alacritty.svg"
-    ln -s "terminal.svg" "$SOURCE/icons/links/scalable/apps/Alacritty.svg"
-    ./install.sh ubuntu
-    cd "$SOURCE"
+    echo "Install apt packages..."
+    sudo apt-get update
+    sudo apt-get install -y papirus-icon-theme alacritty gnome-shell-extension-manager flatpak
+
+    echo "Setup flatpak..."
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    echo "Install flatpak packages..."
+    flatpak install flathub re.sonny.Junction
+
+    echo "Install snap packages..."
+    sudo snap install flameshot vlc
 fi
 
 echo "Upgrade pip3"
