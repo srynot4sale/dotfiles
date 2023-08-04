@@ -4,6 +4,12 @@ set -e
 
 SOURCE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if [[ "$USER" == "root" ]];
+then
+    echo "Do not run as root"
+    exit 3
+fi
+
 echo "Install stow..."
 sudo apt-get install -y stow
 
@@ -102,3 +108,8 @@ if [[ -f "$PROFILEINI" ]]; then
         stow --target "${PROFILEDIR}/chrome" -R mozilla
     fi
 fi
+
+echo
+echo "#######################"
+echo "# install.sh complete!"
+echo "#######################"
