@@ -88,8 +88,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
-echo "Install pip packages as user..."
-pip3 install --upgrade pgcli ipython termcolor glances pipenv docker-compose
+echo "Install pip packages with pipx..."
+python3 -m pip install --user pipx
+PPKGS="pgcli ipython glances pipenv autorandr"
+for p in $PPKGS
+do
+    pipx install "$p"
+done
 
 echo "Install Aqua..."
 curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash -s -- -i "$HOME/.local/bin/aqua"
