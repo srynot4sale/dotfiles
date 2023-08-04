@@ -71,7 +71,8 @@ if xset q &>/dev/null; then
     flatpak install flathub re.sonny.Junction
 
     echo "Install snap packages..."
-    sudo snap install flameshot vlc
+    sudo snap install vlc
+    # flameshot - not working
 fi
 
 echo "Upgrade pip3"
