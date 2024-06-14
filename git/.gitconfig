@@ -61,3 +61,6 @@
 
 [interactive]
     diffFilter = delta --color-only
+
+[commit]
+    verbose = true
