@@ -90,7 +90,7 @@ vim +PlugUpdate +qall
 
 echo "Install pip packages with pipx..."
 python3 -m pip install --user pipx
-PPKGS="pgcli ipython glances pipenv autorandr"
+PPKGS="pgcli ipython glances pipenv autorandr tftui"
 for p in $PPKGS
 do
     pipx install "$p"
