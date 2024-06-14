@@ -101,6 +101,7 @@ bindkey "^[[1;3C" forward-word
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
+export PIP_REQUIRE_VIRTUALENV=true
 
 # Prevent pasting performance dying due to highlighting
 zle_highlight+=(paste:none)
