@@ -9,7 +9,6 @@ set encoding=utf-8
 
 """""" vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'vim-syntastic/syntastic'
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -21,15 +20,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'elzr/vim-json'
 Plug 'vim-airline/vim-airline'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'dense-analysis/ale'
 call plug#end()
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['flake8', 'mypy']
-let g:syntastic_sh_shellcheck_args = '-x'  " allow shellcheck to test source'd files
 
 let g:gitgutter_sign_allow_clobber = 1
 
@@ -43,6 +35,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 let g:vim_json_syntax_conceal = 0
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 
 """""" GUI stuff
