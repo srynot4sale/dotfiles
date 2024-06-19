@@ -3,8 +3,8 @@
 # https://aquaproj.github.io/
 registries:
 - type: standard
-  ref: v3.42.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.196.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-  - name: 99designs/aws-vault@v6.6.0
-  - name: dandavison/delta@0.14.0
-  - name: aws/aws-cli@2.7.30
+  - name: 99designs/aws-vault@v7.2.0
+  - name: dandavison/delta@0.17.0
+  - name: aws/aws-cli@2.16.12
