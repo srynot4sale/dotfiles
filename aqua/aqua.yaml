@@ -8,3 +8,4 @@ packages:
   - name: 99designs/aws-vault@v7.2.0
   - name: dandavison/delta@0.17.0
   - name: aws/aws-cli@2.16.12
+  - name: hashicorp/terraform-ls@v0.33.2
