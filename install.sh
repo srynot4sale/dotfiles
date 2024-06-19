@@ -62,7 +62,7 @@ if xset q &>/dev/null; then
 
     echo "Install apt packages..."
     sudo apt-get update
-    sudo apt-get install -y papirus-icon-theme alacritty gnome-shell-extension-manager flatpak
+    sudo apt-get install -y papirus-icon-theme alacritty gnome-shell-extension-manager flatpak pavucontrol
 
     echo "Setup flatpak..."
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
