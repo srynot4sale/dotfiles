@@ -89,7 +89,7 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages with pipx..."
-python3 -m pip install --user pipx
+PIP_REQUIRE_VIRTUALENV=false python3 -m pip install --user pipx
 PPKGS="pgcli ipython glances pipenv autorandr tftui"
 for p in $PPKGS
 do
