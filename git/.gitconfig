@@ -1,14 +1,3 @@
-[color]
-    branch = auto
-    diff = auto
-    status = auto
-    showbranch = auto
-    ui = always
-
-[user]
-    name = Aaron Barnes
-    email = aaron@io.nz
-
 [alias]
     cdiff = diff --cached
     wdiff = diff --word-diff
@@ -31,27 +20,19 @@
     branches = "!f() { git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) | %(color:red)%(objectname:short)%(color:reset) | %(contents:subject) | %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' --color | column -s '|' -t; }; f"
     reverse = reset --merge HEAD~1
 
-[pull]
-    ff = only
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    showbranch = auto
+    ui = always
 
-[push]
-    default = tracking
+[commit]
+    verbose = true
 
 [core]
     pager = delta
     editor = vim
-
-[merge]
-    renamelimit = 100000
-
-[diff]
-    noprefix = True
-
-[tag]
-    sort = version:refname
-
-[pager]
-    branch = false
 
 [delta]
     syntax-theme = Coldark-Dark
@@ -59,11 +40,30 @@
     line-numbers = true
     width = variable
 
-[interactive]
-    diffFilter = delta --color-only
-
-[commit]
-    verbose = true
+[diff]
+    noprefix = True
 
 [init]
     defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    renamelimit = 100000
+
+[pager]
+    branch = false
+
+[pull]
+    ff = only
+
+[push]
+    default = tracking
+
+[tag]
+    sort = version:refname
+
+[user]
+    name = Aaron Barnes
+    email = aaron@io.nz
