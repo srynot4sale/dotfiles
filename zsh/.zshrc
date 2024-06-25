@@ -119,6 +119,11 @@ alias awslogindev="aws-vault login fb-dev-assume"
 alias awsloginprod="aws-vault login fb-prod-assume"
 alias awstf="aws-vault exec root -- terraform"
 
+# Change to the top level dir of the current git repo
+function cdg {
+  cd $(git rev-parse --show-toplevel)
+}
+
 ########################################################################
 # Grab local zsh
 [ -f ~/code/dotfiles/.zshrc_local ] && source ~/code/dotfiles/.zshrc_local
