@@ -8,6 +8,8 @@ packages:
   - name: 99designs/aws-vault@v7.2.0
   - name: dandavison/delta@0.17.0
   - name: aws/aws-cli@2.16.12
+  - name: hashicorp/terraform@v1.8.5
   - name: hashicorp/terraform-ls@v0.33.2
   - name: aquasecurity/tfsec@v1.28.6
   - name: terraform-linters/tflint@v0.51.1
+  - name: GoogleCloudPlatform/terraformer@0.8.24
