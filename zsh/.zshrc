@@ -115,9 +115,13 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local
 alias psql=pgcli
 alias ack=ag
 alias cat=batcat
-alias awslogindev="aws-vault login fb-dev-assume"
-alias awsloginprod="aws-vault login fb-prod-assume"
-alias awstf="aws-vault exec root -- terraform"
+
+alias fbawslogindev="aws-vault login fb-dev-assume"
+alias fbawsloginprod="aws-vault login fb-prod-assume"
+alias fbawstf="aws-vault exec fb-root -- terraform"
+
+alias reawstf="/home/abarnes/code/reshop/scripts/run_tf.sh"
+alias reops="/home/abarnes/code/reshop/scripts/ops.sh"
 
 # Change to the top level dir of the current git repo
 function cdg {
