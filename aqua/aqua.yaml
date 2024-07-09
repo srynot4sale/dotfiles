@@ -13,3 +13,4 @@ packages:
   - name: aquasecurity/tfsec@v1.28.6
   - name: terraform-linters/tflint@v0.51.1
   - name: GoogleCloudPlatform/terraformer@0.8.24
+  - name: hadolint/hadolint@v2.12.0
