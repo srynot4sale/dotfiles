@@ -128,10 +128,11 @@ function cdg {
   cd $(git rev-parse --show-toplevel)
 }
 
+# Atuin config
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
 ########################################################################
 # Grab local zsh
 [ -f ~/code/dotfiles/.zshrc_local ] && source ~/code/dotfiles/.zshrc_local
 
-# Hishtory Config:
-export PATH="$PATH:/home/abarnes/.hishtory"
-source /home/abarnes/.hishtory/config.zsh
