@@ -9,13 +9,14 @@ set encoding=utf-8
 
 """""" vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdcommenter'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -34,6 +35,8 @@ let g:vim_json_syntax_conceal = 0
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
+let g:airline_theme='gruvbox'
+
 
 """""" coc stuff
 
@@ -84,8 +87,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 """""" GUI stuff
 set background=dark
-" If gvim, or terminal has 256+ colors
-autocmd vimenter * colorscheme gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
 
 au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
 
