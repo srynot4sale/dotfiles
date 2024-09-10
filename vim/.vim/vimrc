@@ -87,6 +87,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 """""" GUI stuff
 set background=dark
+set termguicolors
 autocmd vimenter * ++nested colorscheme gruvbox
 
 au! GuiEnter * set vb t_vb=     " Disable the visual bell in gvim
