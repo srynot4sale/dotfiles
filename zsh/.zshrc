@@ -130,7 +130,7 @@ function cdg {
 
 # Atuin config
 . "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 ########################################################################
 # Grab local zsh
