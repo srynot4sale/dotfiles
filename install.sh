@@ -28,6 +28,10 @@ stow --target "$HOME" -R zsh
 echo "Install vim config..."
 stow --target "$HOME" -R vim
 
+echo "Install nvim config..."
+mkdir -p "$HOME/.config/nvim"
+stow --target "$HOME/.config/nvim" -R nvim
+
 echo "Install alacritty config..."
 mkdir -p "$HOME/.config/alacritty"
 stow --target "$HOME/.config/alacritty" -R alacritty

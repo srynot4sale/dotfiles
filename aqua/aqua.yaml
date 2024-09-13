@@ -14,3 +14,4 @@ packages:
   - name: terraform-linters/tflint@v0.51.1
   - name: GoogleCloudPlatform/terraformer@0.8.24
   - name: hadolint/hadolint@v2.12.0
+  - name: neovim/neovim@v0.10.1

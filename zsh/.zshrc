@@ -115,6 +115,8 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local
 alias psql=pgcli
 alias ack=ag
 alias cat=batcat
+alias v="nvim"
+alias vim="nvim"
 
 alias fbawslogindev="aws-vault login fb-dev-assume"
 alias fbawsloginprod="aws-vault login fb-prod-assume"
