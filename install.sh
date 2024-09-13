@@ -29,8 +29,7 @@ echo "Install vim config..."
 stow --target "$HOME" -R vim
 
 echo "Install nvim config..."
-mkdir -p "$HOME/.config/nvim"
-stow --target "$HOME/.config/nvim" -R nvim
+stow --target "$HOME/.config" -R nvim
 
 echo "Install alacritty config..."
 mkdir -p "$HOME/.config/alacritty"

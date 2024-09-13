@@ -10,5 +10,8 @@
             "initializationOptions": {},
             "settings": {}
         }
-    }
+    },
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.parameterTypes": false,
 }
