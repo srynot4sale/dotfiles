@@ -119,9 +119,8 @@ set shiftround                  " Use multiple of shiftwidth when indenting with
 set copyindent                  " Copy the previous indentation on autoindenting
 
 
-"""""" Mouse support in vim
-"set mouse=a
-"set ttymouse=xterm2
+"""""" Disable mouse in nvim
+set mouse=
 
 
 """""" White space
