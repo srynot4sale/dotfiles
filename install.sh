@@ -76,6 +76,14 @@ if xset q &>/dev/null; then
     echo "Install snap packages..."
     sudo snap install vlc
     # flameshot - not working
+
+    echo "Install gnome extensions..."
+    #./helpers/gnome-shell-extension-installer bluetooth-quick-connect@bjarosze.gmail.com
+    #./helpers/gnome-shell-extension-installer dash-to-panel@jderose9.github.com
+    #./helpers/gnome-shell-extension-installer sound-output-device-chooser@kgshank.net
+    #./helpers/gnome-shell-extension-installer caffeine@patapon.info
+    #./helpers/gnome-shell-extension-installer mediacontrols@cliffniff.github.com
+    #./helpers/gnome-shell-extension-installer tophat@fflewddur.github.io
 fi
 
 echo "Upgrade pip3"
