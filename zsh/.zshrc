@@ -115,6 +115,7 @@ export PATH="${HOME}/code/dotfiles/bin:${HOME}/.local/bin:${PATH}:${HOME}/.local
 alias psql=pgcli
 alias ack=ag
 alias cat=batcat
+alias l="ls -alv --group-directories-first"
 alias v="nvim"
 alias vim="nvim"
 
