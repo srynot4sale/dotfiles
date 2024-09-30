@@ -32,7 +32,7 @@
 
 [core]
     pager = delta
-    editor = vim
+    editor = nvim
 
 [delta]
     syntax-theme = Coldark-Dark
