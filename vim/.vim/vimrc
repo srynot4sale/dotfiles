@@ -20,6 +20,7 @@ Plug 'morhetz/gruvbox'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 call plug#end()
 
 let g:gitgutter_sign_allow_clobber = 1
