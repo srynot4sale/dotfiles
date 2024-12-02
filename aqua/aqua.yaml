@@ -3,15 +3,15 @@
 # https://aquaproj.github.io/
 registries:
 - type: standard
-  ref: v4.196.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.265.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: 99designs/aws-vault@v7.2.0
-  - name: dandavison/delta@0.17.0
-  - name: aws/aws-cli@2.16.12
-  - name: hashicorp/terraform@v1.8.5
-  - name: hashicorp/terraform-ls@v0.33.2
-  - name: aquasecurity/tfsec@v1.28.6
-  - name: terraform-linters/tflint@v0.51.1
+  - name: dandavison/delta@0.18.2
+  - name: aws/aws-cli@2.22.7
+  - name: hashicorp/terraform@v1.10.0
+  - name: hashicorp/terraform-ls@v0.36.0
+  - name: aquasecurity/tfsec@v1.28.11
+  - name: terraform-linters/tflint@v0.54.0
   - name: GoogleCloudPlatform/terraformer@0.8.24
   - name: hadolint/hadolint@v2.12.0
-  - name: neovim/neovim@v0.10.1
+  - name: neovim/neovim@v0.10.2
