@@ -119,10 +119,9 @@ alias l="ls -alv --group-directories-first"
 alias v="nvim"
 alias vim="nvim"
 
-alias fbawslogindev="aws-vault login fb-dev-assume"
-alias fbawsloginprod="aws-vault login fb-prod-assume"
-alias fbawstf="aws-vault exec fb-root -- terraform"
-alias fbawstui="aws-vault exec fb-root -- tftui -o -n"
+alias fbawstf="assume fb-admin --exec -- terraform"
+alias fbawstui="assume fb-admin --exec -- tftui -o -n"
+alias fb="make -f ~/code/needles/scripts/Makefile"
 
 
 # Change to the top level dir of the current git repo
