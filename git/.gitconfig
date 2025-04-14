@@ -9,6 +9,8 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --topo-order
     llol = log --decorate --pretty=oneline --abbrev-commit --topo-order
     llog = log --no-merges --decorate --topo-order
+    logt = log --topo-order
+    out = log @{u}..  # unpushed commits
     track = checkout --track
     ll = log -n1
     cmt = commit -v
