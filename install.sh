@@ -108,8 +108,7 @@ do
 done
 
 echo "Install Aqua to $HOME/.local/bin..."
-curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.0.1/aqua-installer | bash
-ln -f -s ~/.local/share/aquaproj-aqua/bin/aqua ~/.local/bin/aqua
+curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash
 
 echo "Install misc binaries with aqua..."
 "$HOME/.local/bin/aqua" i
