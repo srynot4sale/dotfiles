@@ -124,10 +124,36 @@ alias fbawstf="assume fb-admin --exec -- terraform"
 alias fbawstui="assume fb-admin --exec -- tftui -o -n"
 alias fb="make -f ~/code/needles/scripts/Makefile"
 
+### GIT RELATED
+alias pull="git pull --ff-only"
 
 # Change to the top level dir of the current git repo
 function cdg {
   cd $(git rev-parse --show-toplevel)
+}
+
+# Push current branch to origin
+function gp {
+  git push origin $(git_branch)
+}
+
+# Force push current branch to origin
+function gpu {
+  git push origin +$(git_branch)
+}
+
+# Return current git branch name
+function git_branch {
+  git symbolic-ref --quiet --short HEAD 2>/dev/null \
+    || return 1
+}
+
+# Find a particular git stash
+function git-stash-find {
+  git stash list --format='%gd' |
+  while read -r s; do
+    git stash show -p "$s" | grep -nH -- "$1" && echo "^^ found in $s"
+  done
 }
 
 # Atuin config
