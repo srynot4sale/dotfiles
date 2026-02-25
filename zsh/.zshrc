@@ -2,11 +2,12 @@
 source ~/.zsh/antigen.zsh
 antigen init ~/.zsh/.antigenrc
 
-# Theme
 export LANGUAGE="en"
 export LC_CTYPE="en_NZ.UTF-8"
 export LANG="en_NZ.UTF-8"
+export EDITOR="nvim"
 
+# Theme
 # Theme config (modified from YS theme)
 
 # Clean, simple, compatible and meaningful.
