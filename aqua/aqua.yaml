@@ -9,7 +9,7 @@ packages:
   - name: common-fate/granted@v0.36.3
   - name: dandavison/delta@0.18.2
   - name: aws/aws-cli@2.22.11
-  - name: cli/cli@v2.63.1
+  - name: cli/cli@v2.83.0
   - name: hashicorp/terraform@v1.10.5
   - name: hashicorp/terraform-ls@v0.36.0
   - name: aquasecurity/tfsec@v1.28.11
