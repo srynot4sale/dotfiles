@@ -52,7 +52,7 @@ stow --target "$HOME" -R dig
 
 echo "Install/update apt packages..."
 sudo apt-get update
-sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag python3-dev ack-grep shellcheck zsh jq tree cmake python3-pip fzf ssh bat python3.10-venv ssh xclip
+sudo apt-get install -y curl wget vim postgresql-common libpq-dev silversearcher-ag ack-grep shellcheck zsh jq tree cmake fzf ssh bat ssh xclip
 
 # X stuff
 if xset q &>/dev/null; then
@@ -86,8 +86,8 @@ if xset q &>/dev/null; then
     #./helpers/gnome-shell-extension-installer tophat@fflewddur.github.io
 fi
 
-echo "Upgrade pip3"
-sudo -H python3 -m pip install --upgrade pip
+echo "Install uv"
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 echo "Install antigen for zsh"
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > "$SOURCE/zsh/.zsh/antigen.zsh"
@@ -100,11 +100,10 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages with pipx..."
-PIP_REQUIRE_VIRTUALENV=false python3 -m pip install --user pipx
-PPKGS="pgcli ipython glances pipenv autorandr tftui uv"
+PPKGS="pgcli ipython glances pipenv autorandr tftui"
 for p in $PPKGS
 do
-    pipx install "$p"
+    uv tool install "$p"
 done
 
 echo "Install Aqua to $HOME/.local/bin..."
