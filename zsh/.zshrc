@@ -121,8 +121,15 @@ alias v="nvim"
 alias vim="nvim"
 
 alias fbawstf="assume fb-admin --exec -- terraform"
-alias fbawstui="assume fb-admin --exec -- tftui -o -n"
 alias fb="make -f ~/code/needles/scripts/Makefile"
+
+alias fbdev="assume fb-dev-admin --exec --"
+alias fbint="assume fb-int-admin --exec --"
+alias fbprod="assume fb-prod-admin --exec --"
+
+alias fbcdev="assume -c fb-dev-admin"
+alias fbcint="assume -c fb-int-admin"
+alias fbcprod="assume -c fb-prod-admin"
 
 ### GIT RELATED
 alias pull="git pull --ff-only"
