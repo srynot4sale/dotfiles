@@ -85,11 +85,11 @@ if xset q &>/dev/null; then
     #./helpers/gnome-shell-extension-installer tophat@fflewddur.github.io
 fi
 
-echo "Install uv"
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
 echo "Install antigen for zsh"
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > "$SOURCE/zsh/.zsh/antigen.zsh"
+
+echo "Install uv"
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 echo "Install vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
