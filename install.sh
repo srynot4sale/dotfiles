@@ -60,12 +60,11 @@ if xset q &>/dev/null; then
 
     echo "Add PPAs..."
     # Doing them together saves multiple apt-get update calls
-    sudo add-apt-repository ppa:papirus/papirus -y
     sudo add-apt-repository ppa:aslatter/ppa -y # alacritty
 
     echo "Install apt packages..."
     sudo apt-get update
-    sudo apt-get install -y papirus-icon-theme alacritty gnome-shell-extension-manager flatpak pavucontrol
+    sudo apt-get install -y alacritty gnome-shell-extension-manager flatpak pavucontrol
 
     echo "Setup flatpak..."
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -100,7 +99,7 @@ echo "Install vim plugins..."
 vim +PlugUpdate +qall
 
 echo "Install pip packages with pipx..."
-PPKGS="pgcli ipython glances pipenv autorandr tftui"
+PPKGS="pgcli glances tftui"
 for p in $PPKGS
 do
     uv tool install "$p"
