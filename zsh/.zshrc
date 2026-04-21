@@ -132,7 +132,11 @@ alias fbcint="assume -c fb-int-admin"
 alias fbcprod="assume -c fb-prod-admin"
 
 ### GIT RELATED
-alias pull="git pull --ff-only"
+alias gpull="git pull --ff-only"
+alias status="git status"
+alias gm="git switch master && pull"
+alias gd="git switch develop && pull"
+
 
 # Change to the top level dir of the current git repo
 function cdg {
@@ -140,12 +144,12 @@ function cdg {
 }
 
 # Push current branch to origin
-function gp {
+function gpush {
   git push origin $(git_branch)
 }
 
 # Force push current branch to origin
-function gpu {
+function gfpush {
   git push origin +$(git_branch)
 }
 
