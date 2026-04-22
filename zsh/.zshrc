@@ -134,8 +134,8 @@ alias fbcprod="assume -c fb-prod-admin"
 ### GIT RELATED
 alias gpull="git pull --ff-only"
 alias status="git status"
-alias gm="git switch master && pull"
-alias gd="git switch develop && pull"
+alias gm="git switch master && gpull"
+alias gd="git switch develop && gpull"
 
 
 # Change to the top level dir of the current git repo
